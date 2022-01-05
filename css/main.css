@@ -1,34 +1,66 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
-
-#dasmotosArts {
-    font-size: 100px;
-    font-weight: bold;
-    color: khaki;
-    background-image: url("../images/dasmotos/frames.jpeg");
-    text-align: center;
+body {
+    margin: 0;
 }
 
-.itemType {
-    font-size: 32px;
-    font-weight: bold;
+main {
+    padding: 1vw;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0d1831;
+}
+
+footer {
+    background-color: #0d1831;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10vw;
+}
+
+h1 {
+    text-align: center;
+    font-size: 88px;
     color: white;
 }
 
-#brushes {
-    background-color: mediumspringgreen;
+h3{
+    color: rgb(50, 49, 48);
 }
 
-#frames {
-    background-color: lightcoral;
+h2, h4, h5, h6 {
+    text-align: center;
 }
 
-#paint {
-    background-color: skyblue;
+p{
+    color: white;
 }
 
-.price {
-    font-weight: bold;
-    color: blue;
+a:visited {
+    color: rgb(50, 49, 48);
+}
+
+a {
+    color: rgb(219, 215, 208)
+}
+
+#headshot {
+    border-radius: 50%;
+    height:120px;
+    width:120px;
+}
+
+figcaption {
+    font-style: italic;
+    color: grey;
+}
+
+img.social {
+    margin-left: 2vw;
 }
