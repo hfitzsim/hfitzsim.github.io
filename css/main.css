@@ -31,12 +31,9 @@ h1 {
     color: white;
 }
 
-h3{
-    color: rgb(50, 49, 48);
-}
-
-h2, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     text-align: center;
+    color: rgb(50, 49, 48);
 }
 
 p{
