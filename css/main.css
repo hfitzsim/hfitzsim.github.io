@@ -1,3 +1,4 @@
+/*ELEMENTS*/
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -50,17 +51,29 @@ a {
     color: rgb(23, 35, 88)
 }
 
+figcaption {
+    font-style: italic;
+    color: grey;
+}
+
+/*CLASSES*/
+.description {
+    display: flex;
+    justify-content: center;
+    padding: 5vw;
+}
+
+img.social {
+    margin-left: 2vw;
+}
+
+/*IDs*/
 #headshot {
     border-radius: 50%;
     height:120px;
     width:120px;
 }
 
-figcaption {
-    font-style: italic;
-    color: grey;
-}
-
-img.social {
-    margin-left: 2vw;
+#connect {
+    color: white;
 }
