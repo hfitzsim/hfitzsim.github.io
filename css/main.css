@@ -53,16 +53,18 @@ figcaption {
     color: grey;
 }
 
+
 /*CLASSES*/
 .description {
     display: flex;
     justify-content: center;
-    padding: 2.5vw, 5vw, 2.5vw, 5vw;
+    margin: 2.5vh 5vw 2.5vh 5vw;
 }
 
 img.social {
     margin-left: 2vw;
 }
+
 
 /*IDs*/
 #headshot {
