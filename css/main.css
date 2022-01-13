@@ -27,7 +27,7 @@ footer {
 
 h1 {
     text-align: center;
-    font-size: 88px;
+    font-size: 4em;
     color: white;
 }
 
@@ -51,8 +51,8 @@ a {
 figcaption {
     font-style: italic;
     color: grey;
+    font-size: 0.5em;
 }
-
 
 /*CLASSES*/
 .description {
@@ -65,6 +65,22 @@ img.social {
     margin-left: 2vw;
 }
 
+.wrappedImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img.wrappedImage {
+    height: auto;
+    width:75%;
+}
+
+.wrappedImages figure {
+    margin: 0;
+    margin: 10px;
+    flex-basis: 33.33%;
+}
 
 /*IDs*/
 #headshot {
@@ -75,4 +91,19 @@ img.social {
 
 #connect {
     color: white;
+}
+
+/*MEDIA QUERIES*/
+@media (min-width:320px)  { 
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+    h1 {
+        font-size: 2em;
+    }
+
+}
+@media (min-width:480px)  { 
+    /* smartphones, Android phones, landscape iPhone */ 
+    h1 {
+        font-size: 3em;
+    }
 }
