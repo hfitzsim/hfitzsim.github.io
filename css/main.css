@@ -12,9 +12,11 @@ main {
 
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     background-color: #0d1831;
+    padding: 1.5vh;
+    padding-left: 10vw;
 }
 
 footer {
