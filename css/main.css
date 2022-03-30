@@ -10,6 +10,27 @@ main {
     padding: 1vw;
 }
 
+#home {
+    margin: 0; padding: 0
+}
+
+
+#home div {
+    height: 100vh;
+    width: 100vw;
+    background-color:rgb(88, 88, 88); 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #welcome {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pinyon Script', cursive;
+    color:rgb(255, 255, 255);
+    font-size: 72px;
+ }
 main.profile {
     text-align: center;
     margin: 2vw;
