@@ -25,7 +25,7 @@ main {
     align-items: center;
  }
 
- #welcome {
+#welcome {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Pinyon Script', cursive;
     color:rgb(255, 255, 255);
@@ -44,7 +44,7 @@ header {
     align-items: center;
     background-color: white;
     padding: 2vw;
-    border-bottom: 1px solid black;
+    border: none;
 }
 
 header div.nav-bar {
@@ -63,7 +63,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     padding-right: 10vw;
-    border-top: 1px solid black;
+    border-top: 1px black solid;
 }
 
 h1 {
@@ -101,6 +101,11 @@ figcaption {
     display: flex;
     align-items: center;
 }
+
+div.container:hover {
+    border: none;
+}
+
 .project img {
     height: auto;
     width: 400px;
@@ -110,6 +115,7 @@ figcaption {
 .project img:hover {
     opacity: 30%;
 }
+
 div.container {
     display: flex;
     height: 400px;
@@ -126,8 +132,8 @@ main.landing {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     height: auto;
 }
 
