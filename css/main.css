@@ -14,22 +14,22 @@ main {
     margin: 0; padding: 0
 }
 
-
-#home div {
-    height: 100vh;
-    width: 100vw;
-    background-color:rgb(88, 88, 88); 
-    margin: 0;
+#home {
     display: flex;
     justify-content: center;
-    align-items: center;
- }
+    text-align: center;
+}
+
+#toPortfolio {
+    background-color: white;
+    border: 1px solid black;
+    padding: 1%;
+    color: black;
+    cursor: pointer;
+}
 
 #welcome {
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Pinyon Script', cursive;
-    color:rgb(255, 255, 255);
-    font-size: 72px;
+    font-size: 60px;
  }
 main.profile {
     text-align: center;
