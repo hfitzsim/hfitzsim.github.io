@@ -8,29 +8,9 @@ body {
 
 main {
     padding: 1vw;
+    height: 65vh;
 }
 
-#home {
-    margin: 0; padding: 0
-}
-
-#home {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-#toPortfolio {
-    background-color: white;
-    border: 1px solid black;
-    padding: 1%;
-    color: black;
-    cursor: pointer;
-}
-
-#welcome {
-    font-size: 60px;
- }
 main.profile {
     text-align: center;
     margin: 2vw;
@@ -50,11 +30,6 @@ header {
 header div.nav-bar {
     justify-content: flex-end;
     align-self: flex-end;
-}
-
-.nav-bar .nav {
-    padding-left: 2vw;
-    padding-right: 2vw;
 }
 
 footer {
@@ -96,7 +71,21 @@ figcaption {
     font-size: 0.75em;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: auto;
+    padding: 5%;
+}
+
 /*CLASSES*/
+
+.nav-bar .nav {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
 .project {
     display: flex;
     align-items: center;
@@ -186,12 +175,28 @@ img.wrappedImage {
     border-bottom: 1px solid black;
 }
 
-form {
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: auto;
-    padding: 5%;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /*IDs*/
@@ -216,6 +221,30 @@ form {
     border: none;
     border-radius: 5%;
 }
+
+#home {
+    margin: 0; padding: 0
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#toPortfolio {
+    background-color: white;
+    border: 1px solid black;
+    padding: 16px;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#welcome {
+    font-size: 60px;
+ }
+
 
 /*MEDIA QUERIES*/
 @media (min-width:320px)  { 

@@ -9,37 +9,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="../css/main.css" type="text/css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="images/headshot.png" />
-    <title>Hannah L.F.</title>
+    <script type="text/javascript" src="../scripts/main.js"></script>
+
+    <title>Hannah Fitzsimmons</title>
 </head>
 
 <body>
     <header>
-        <a href="../index.html"><img id="hf-logo" src="../images/HF-LOGO.png"></a>        
+        <a href="../index.html"><img id="hf-logo" src="../images/HF-LOGO.png"></a>
         <div class="nav-bar">
             <ul>
                 <a class="nav" href="/pages/about.html">ABOUT </a>
-                <a class="nav" href="/pages/portfolio.html">PORTFOLIO <span>&#x25BE;</span></a>
+                <a class="nav dropdown" id="portfolio" href="/pages/portfolio.html">PORTFOLIO <span>&#x25BE;</span></a>
+                <div class="dropdown-content" id="dropdown-content">
+                    <a href="./portfolio/mountain-matrix.html">Mountain Matrix</a><br>
+                    <a href="./portfolio/event-tracker.html">Event Tracker</a><br>
+                    <a href="./portfolio/thesill.html">The Sill</a><br>
+                    <a href="./portfolio/saveadog.html">Save A Dog</a>
+                </div>
                 <a class="nav" href="/pages/resume.html">RESUME </a>
-                <a class="nav" href="/pages/contact.html">CONTACT </a>
             </ul>
         </div>
     </header>
     <main class="profile">
         <img id="headshot" src="/images/headshot.png" />
         <h3>Bio</h3>
-        <p>Hannah is originally from Western Massachusetts and moved to Boston in 2018. She has worked at Boston
-            University for three years in various administrative roles.
-            She holds a Bachelor’s degree from the Isenberg School of Management of the University of Massachusetts
-            Amherst in Operations and Information Management
-            where she also minored in Information Technology.
-            Currently she is pursuing a Master of Science in Computer Information Systems concentrating in Web
-            Application Development. She is set to graduate in August of 2022.
+        <p>Originally from western Massachusetts, Hannah moved to Boston in 2018. She studied Operations & Information management at UMass Amherst and minored in Information Technology.
+            Currently she is pursuing an MS in Computer Information Systems with a concentration in Web App Development. She is expected to graduate in August 2022. 
         </p>
         <p>
-            In her free time, she enjoys taking classes, roller-skating, seeing what’s new on Netflix, and exploring the
-            city. <br>
-            In the snowy months, she spends her weekends snowboarding and enjoying hot chocolate.
+            In her free time, she enjoys exploring the city, catching up with friends, and seeing what's new on Netflix. <br>
+            In the winter, she can be found snowboarding in the mountains.
         </p>
+        <p>You can learn more from her resume here: <span><a href="/pages/resume.html"><button id="toPortfolio">Resume &#x2192;</button></a></span></p>
+        
+
     </main>
     <footer>
         <a target="_blank" href="https://www.upwork.com/freelancers/~01ea12818dd6b5567e"><img src="../images/upwork.png"

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pinyon+Script&display=swap" rel="stylesheet">
     <link href="./css/main.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="/scripts/main.js"></script>
     <link rel="icon" type="image/x-icon" href="images/headshot.png" />
     <title>Hannah L.F.</title>
 </head>
@@ -18,17 +19,21 @@
         <a href="/index.html"><img id="hf-logo" src="../../images/HF-LOGO.png"></a>
         <div class="nav-bar">
             <a class="nav" href="/pages/about.html">ABOUT </a>
-            <a class="nav" href="/pages/portfolio.html">PORTFOLIO <span>&#x25BE;</span></a>
+            <a class="nav dropdown" id="portfolio" href="/pages/portfolio.html">PORTFOLIO <span>&#x25BE;</span></a>
+            <div class="dropdown-content" id="dropdown-content">
+                <a href="/pages/portfolio/mountain-matrix.html">Mountain Matrix</a><br>
+                <a href="/pages/portfolio/event-tracker.html">Event Tracker</a><br>
+                <a href="/pages/portfolio/thesill.html">The Sill</a><br>
+                <a href="/pages/portfolio/saveadog.html">Save A Dog</a>
+            </div>
             <a class="nav" href="/pages/resume.html">RESUME </a>
-            <a class="nav" href="/pages/contact.html">CONTACT </a>
         </div>
+
+
     </header>
     <main id="home">
         <div>
-            <h1 id="welcome">Hello, &#128075;. My name is <span style="font-weight: 900;">Hannah</span></h1>
-            <p>This is my WIP personal website. I have been working on this in between my full-time job and pursuit of a masters degree. Please excuse how I look under construction! 
-                <br>I'm a web developer with a passion for excellent design. I am currently based out of Boston. My main focus is building elegant, accessible, and functional apps that users enjoy.</p>
-            <p>You can have a look at some of my work here.</p>
+            <h1 id="welcome">Welcome</h1>
             <a href="/pages/portfolio.html"><button id="toPortfolio">See My Work &#x2192;</button></a>
         </div>
     </main>
