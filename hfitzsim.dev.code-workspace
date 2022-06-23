@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../hfitzsim.dev"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "hfitzsim.github.io"
+	}
+}
