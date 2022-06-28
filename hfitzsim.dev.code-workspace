@@ -1,10 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "../../hfitzsim.dev"
+			"path": "."
 		},
 		{
-			"path": "."
+			"path": "../../../JavaScript Data Structures"
+		},
+		{
+			"path": "../../CS701_FinalProject/CS701_TermProject/mtn-matrix"
 		}
 	],
 	"settings": {

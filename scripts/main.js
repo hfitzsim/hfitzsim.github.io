@@ -1,9 +1,8 @@
 window.onload = () => {
     let portfolio = document.getElementById("portfolio");
-    portfolio.addEventListener("mouseenter", () => {
+
+    portfolio.addEventListener("mouseover", () => {
         document.getElementById("dropdown-content").style.display = "block";
     });
-    portfolio.addEventListener("mouseleave", () => {
-        document.getElementById("dropdown-content").style.display = "none";
-    });
+
 }
