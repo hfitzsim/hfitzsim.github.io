@@ -1,0 +1,10 @@
+
+<img src="../../assets/images/whister_photo1.jpg">
+
+<h2>Top Mountains</h2>
+<div class="mountain-menu">
+    <a *ngFor="let mountain of mountains"
+    routerLink="/detail/{{mountain.id}}">
+        {{mountain.name}}
+    </a>
+</div>

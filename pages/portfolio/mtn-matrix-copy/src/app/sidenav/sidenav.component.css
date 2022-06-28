@@ -1,0 +1,32 @@
+.mat-nav-list div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-nav-list div img {
+    align-self: center;
+    width: 200px;
+}
+
+.mat-icon {
+    vertical-align: center;
+    margin-right: 0.5em;
+}
+
+.mat-divider {
+    border-top-width: 2px;
+}
+
+.mat-list-item {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    margin: 0 8px;
+    color: #2e2e2e;
+}
+
+.mat-list-item:hover {
+    background: #009AEE;
+    color: white;
+}

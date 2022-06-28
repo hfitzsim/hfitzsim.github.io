@@ -1,0 +1,29 @@
+<button type="button" class="back-btn" (click)="goBack()">
+  <fa-icon [icon]="chevronLeft"></fa-icon> go back
+</button>
+
+<div class="container">
+  <input type="text" id="search" placeholder="Search..." [(ngModel)]="searched" style="margin-bottom: 1em;">
+</div>
+
+<div class="container">
+  <ul class="mountains">
+    <li *ngFor="let mountain of mountains | filter:searched">
+      <mat-card *ngIf="searched">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title class="card-title">{{mountain.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image
+          src="{{mountain.imgUrl}}"
+          alt="ski resort photo">
+        <mat-card-content>
+          <p>{{mountain.address}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button routerLink="/detail/{{mountain.id}}">see details </button>
+        </mat-card-actions>
+      </mat-card>
+    </li>
+  </ul>
+</div>

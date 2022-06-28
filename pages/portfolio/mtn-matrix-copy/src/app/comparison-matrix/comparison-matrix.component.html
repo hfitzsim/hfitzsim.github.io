@@ -1,0 +1,52 @@
+<button type="button" class="back-btn" (click)="goBack()">
+  <fa-icon [icon]="chevronLeft"></fa-icon> go back
+</button>
+
+<div class="container">
+  <div class="selection-container">
+    <mat-form-field>
+      <mat-label>Select resort</mat-label>
+      <mat-select class="mountains" [(value)]="selectedMountain0" name="mountain">
+        <mat-option *ngFor="let mountain of mountains" [value]="mountain">{{mountain.name | uppercase }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select resort</mat-label>
+      <mat-select class="mountains" [(value)]="selectedMountain1" name="mountain">
+        <mat-option *ngFor="let mountain of mountains" [value]="mountain">{{mountain.name | uppercase }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="comparison-section">
+    <div id="left" class="mountain-detail" *ngIf="selectedMountain0">
+      <img class="compare-img" src="{{selectedMountain0.imgUrl}}" width="100%">
+      <p ><strong>Mountain name: </strong>{{selectedMountain0.name}}</p>
+      <p ><strong>Major seasonpass: </strong>{{selectedMountain0.seasonpass}}</p>
+      <p ><strong>Average annual snow: </strong>{{selectedMountain0.avgAnnualSnow}} inches</p>
+      <p ><strong>Snowmaking: </strong>{{selectedMountain0.snowmaking}}</p>
+      <p ><strong>Skiable area: </strong>{{selectedMountain0.skiableArea}} acres </p>
+      <p ><strong>Vertical: </strong>{{selectedMountain0.vertical}} ft</p>
+      <p ><strong>Total trails: </strong>{{selectedMountain0.totalTrails}}</p>
+      <p ><strong>Total lifts: </strong>{{selectedMountain0.lifts}}</p>
+      <p ><strong>Number of terrain parks: </strong>{{selectedMountain0.terrainParks}}</p>
+      <p ><strong>Nightskiing available? </strong>{{selectedMountain0.nightSkiing}}</p>
+      <p ><strong>Website: </strong><a href="{{selectedMountain0.siteUrl}}">{{selectedMountain0.siteUrl}}</a></p>
+      <p ><strong>Resort address: </strong>{{selectedMountain0.address}}</p>
+    </div>
+    <div id="right" class="mountain-detail" *ngIf="selectedMountain1">
+      <img class="compare-img" src="{{selectedMountain1.imgUrl}}">
+      <p ><strong>Mountain name: </strong>{{selectedMountain1.name}}</p>
+      <p ><strong>Major seasonpass: </strong>{{selectedMountain1.seasonpass}}</p>
+      <p ><strong>Average annual snow: </strong>{{selectedMountain1.avgAnnualSnow}} inches</p>
+      <p ><strong>Snowmaking: </strong>{{selectedMountain1.snowmaking}}</p>
+      <p ><strong>Skiable area: </strong>{{selectedMountain1.skiableArea}} acres </p>
+      <p ><strong>Vertical: </strong>{{selectedMountain1.vertical}} ft</p>
+      <p ><strong>Total trails: </strong>{{selectedMountain1.totalTrails}}</p>
+      <p ><strong>Total lifts: </strong>{{selectedMountain1.lifts}}</p>
+      <p ><strong>Number of terrain parks: </strong>{{selectedMountain1.terrainParks}}</p>
+      <p ><strong>Nightskiing available? </strong>{{selectedMountain1.nightSkiing}}</p>
+      <p ><strong>Website: </strong><a href="{{selectedMountain1.siteUrl}}">{{selectedMountain1.siteUrl}}</a></p>
+      <p ><strong>Resort address: </strong>{{selectedMountain1.address}}</p>
+    </div>
+  </div>
+</div>
