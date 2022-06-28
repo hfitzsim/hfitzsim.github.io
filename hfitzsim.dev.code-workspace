@@ -8,9 +8,12 @@
 		},
 		{
 			"path": "../../CS701_FinalProject/CS701_TermProject/mtn-matrix"
+		},
+		{
+			"path": "../../cs601_eventTracker"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "JavaScript Data Structures"
+		"liveServer.settings.multiRootWorkspaceName": "hfitzsim.github.io"
 	}
 }
