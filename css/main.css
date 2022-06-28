@@ -177,9 +177,6 @@ img.wrappedImage {
     z-index: 1;
 }
 
-
-
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -192,17 +189,9 @@ img.wrappedImage {
 
 #content-wrap {
     padding-bottom: 2.5rem;  
-}
-
-#footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;           
     display: flex;
-    justify-content: flex-end;
-    padding-right: 10vw;
-    border-top: 1px black solid;
+    flex-direction: column;
+    align-items: center;
 }
 
 #headshot {
