@@ -12,6 +12,7 @@
 		"preview": "vite preview",
 		"host": "vite --host localhost --port 8000"
 	},
+	"homepage": "https://hfitzsim.github.io",
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^6.6.0",
 		"@fortawesome/free-brands-svg-icons": "^6.6.0",
