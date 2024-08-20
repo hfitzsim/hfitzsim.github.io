@@ -1,25 +1,24 @@
 import { Group } from '@mantine/core';
-import classes from '@/styles/header.module.scss';
+import { NavLink } from 'react-router-dom';
+import '@/styles/header.scss';
 
 const links = [
-	{ label: 'About', link: '/about' },
+	{ label: 'Bio', link: '/bio' },
 	{ label: 'Projects', link: '/projects' },
 	{ label: 'Contact', link: '/contact' },
 ];
 
 const HeaderMenu = () => {
 	return (
-		<Group>
+		<Group gap={40}>
 			{links.map((link) => (
-				<a
-					style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold' }}
+				<NavLink
 					key={link.label}
-					href={link.link}
-					className={classes.link}
-					onClick={(event) => event.preventDefault()}
+					to={link.link}
+					className={({ isActive }) => (isActive ? 'activeLink' : 'link')}
 				>
 					{link.label}
-				</a>
+				</NavLink>
 			))}
 		</Group>
 	);
