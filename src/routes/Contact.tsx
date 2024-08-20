@@ -20,10 +20,19 @@ const Contact = () => {
 	return (
 		<Stack w={400}>
 			<Group>
-				<Button variant="outline" leftSection={<FontAwesomeIcon icon={faLinkedinIn} />}>
+				<Button
+					variant="outline"
+					leftSection={<FontAwesomeIcon icon={faLinkedinIn} />}
+					onClick={() => (window.location.href = 'https://www.linkedin.com/in/hfitzsim/')}
+				>
 					LinkedIn
 				</Button>
-				<Button leftSection={<FontAwesomeIcon icon={faGithub} />}>GitHub</Button>
+				<Button
+					leftSection={<FontAwesomeIcon icon={faGithub} />}
+					onClick={() => (window.location.href = 'https://github.com/hfitzsim')}
+				>
+					GitHub
+				</Button>
 			</Group>
 			<Title order={2}>Send me a message:</Title>
 			<form>
