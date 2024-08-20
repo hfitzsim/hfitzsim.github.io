@@ -1,7 +1,7 @@
 import { MantineProvider } from '@mantine/core';
 import { theme } from '@/styles';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Root, ErrorPage, About, Projects, Contact } from '@/routes';
+import { Root, ErrorPage, Home, Bio, Projects, Contact } from '@/routes';
 
 const router = createBrowserRouter([
 	{
@@ -10,8 +10,12 @@ const router = createBrowserRouter([
 		errorElement: <ErrorPage />,
 		children: [
 			{
-				path: '/about',
-				element: <About />,
+				index: true,
+				element: <Home />,
+			},
+			{
+				path: '/bio',
+				element: <Bio />,
 			},
 			{
 				path: '/projects',

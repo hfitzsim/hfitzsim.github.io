@@ -1,17 +1,23 @@
-import { AppShell, Title, Group, useMantineTheme, getGradient } from '@mantine/core';
+import { AppShell, Title, Group, Container, useMantineTheme, getGradient } from '@mantine/core';
 import { useHeadroom } from '@mantine/hooks';
 import { HeaderMenu } from '@/components';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const Root = () => {
+	const navigate = useNavigate();
 	const theme = useMantineTheme();
 	const pinned = useHeadroom({ fixedAt: 120 });
 	getGradient({ deg: 180, from: 'blue', to: 'cyan.7' }, theme);
 	return (
 		<AppShell header={{ height: 90, collapsed: !pinned, offset: false }} padding="md">
-			<AppShell.Header bg="transparent" withBorder={false} py={20} px={60}>
+			<AppShell.Header bg="transparent" withBorder={false} py={20} px={100}>
 				<Group justify="space-between" align="center">
-					<Title style={{ letterSpacing: '0.5em' }}>HANNAH FITZSIMMONS</Title>
+					<Title
+						style={{ letterSpacing: '0.5em', cursor: 'pointer' }}
+						onClick={() => navigate('/')}
+					>
+						HANNAH FITZSIMMONS
+					</Title>
 					<HeaderMenu />
 				</Group>
 			</AppShell.Header>
@@ -22,7 +28,9 @@ const Root = () => {
 					theme
 				)}
 			>
-				<Outlet />
+				<Container>
+					<Outlet />
+				</Container>
 			</AppShell.Main>
 		</AppShell>
 	);

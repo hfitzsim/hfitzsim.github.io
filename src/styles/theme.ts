@@ -2,23 +2,23 @@ import { createTheme } from '@mantine/core';
 
 const theme = createTheme({
 	colors: {
-		red: [
-			'#FF4433',
-			'#FF4433',
-			'#FF4433',
-			'#FF4433',
-			'#FF4433',
-			'#FF4433',
-			'#FF4433',
-			'#FF4433',
-			'#FF4433',
-			'#FF4433',
+		charcoal: [
+			'#333333',
+			'#333333',
+			'#333333',
+			'#333333',
+			'#333333',
+			'#333333',
+			'#333333',
+			'#333333',
+			'#333333',
+			'#333333',
 		],
 	},
-	primaryColor: 'red',
+	primaryColor: 'charcoal',
 	primaryShade: 5,
 	cursorType: 'pointer',
-	defaultRadius: 0,
+	defaultRadius: 'sm',
 });
 
 export { theme };
