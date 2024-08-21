@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1,
+		"type": "web",
+		"title": "Mountain Matrix",
+		"image": "src/assets/images/mtn-matrix-mtn-search.png",
+		"description": "Final Project for MET CS 701 Rich Internet App Development"
+	},
+	{
+		"id": 2,
+		"type": "web",
+		"title": "Event Tracker",
+		"image": "src/assets/images/event-tracker-acct-settings.png",
+		"description": "Final Project for MET CS 601 Web App Development"
+	},
+	{
+		"id": 3,
+		"type": "design",
+		"title": "The Sill",
+		"image": "src/assets/images/TheSillMobileApp-2.png",
+		"description": "Mobile App Design for COM CM741 Design & New Media"
+	},
+	{
+		"id": 4,
+		"type": "design",
+		"title": "Save a Dog",
+		"image": "src/assets/images/SaveADog-1.png",
+		"description": "Website Design for COM CM741 Design & New Media"
+	}
+]

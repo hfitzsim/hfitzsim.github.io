@@ -1,6 +1,9 @@
 import { Stack, Title, Text, SimpleGrid, Image, Button } from '@mantine/core';
+import { Resume } from '@/components';
+import { useState } from 'react';
 
 const Bio = () => {
+	const [isResumeVisible, setIsResumeVisible] = useState<boolean>(false);
 	return (
 		<Stack align="center" gap={50} mt={40}>
 			<SimpleGrid cols={3}>
@@ -21,7 +24,10 @@ const Bio = () => {
 				friends.
 			</Text>
 
-			<Button w={150}>Get Resume</Button>
+			<Button w={150} onClick={() => setIsResumeVisible(true)}>
+				Get Resume
+			</Button>
+			{isResumeVisible && <Resume filepath="/files/H.Fitzsimmons.Resume.pdf" />}
 		</Stack>
 	);
 };

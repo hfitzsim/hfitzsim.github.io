@@ -28,7 +28,7 @@ const Root = () => {
 					theme
 				)}
 			>
-				<Container>
+				<Container fluid px={100}>
 					<Outlet />
 				</Container>
 			</AppShell.Main>

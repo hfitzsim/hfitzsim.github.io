@@ -39,7 +39,7 @@ const Contact = () => {
 				<TextInput label="Name" {...form.getInputProps('name')} key={form.key('name')} />
 				<TextInput label="Email" {...form.getInputProps('email')} key={form.key('email')} />
 				<Textarea label="Message" {...form.getInputProps('message')} key={form.key('message')} />
-				<Flex justify="flex-end">
+				<Flex justify="flex-end" mt={30}>
 					<Button type="submit">Submit</Button>
 				</Flex>
 			</form>
