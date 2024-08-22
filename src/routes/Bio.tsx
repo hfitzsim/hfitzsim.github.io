@@ -7,9 +7,9 @@ const Bio = () => {
 	return (
 		<Stack align="center" gap={50} mt={40}>
 			<SimpleGrid cols={3}>
-				<Image src="src/assets/images/kyoto.JPG" radius={600} h={200} w={200} />
-				<Image src="src/assets/images/whistler.PNG" radius={600} h={200} w={200} />
-				<Image src="src/assets/images/tulum.JPEG" radius={600} h={200} w={200} />
+				<Image src="./src/assets/images/kyoto.JPG" radius={600} h={200} w={200} />
+				<Image src="./src/assets/images/whistler.PNG" radius={600} h={200} w={200} />
+				<Image src="./src/assets/images/tulum.JPEG" radius={600} h={200} w={200} />
 			</SimpleGrid>
 
 			<Title order={2}>Designing with passion, coding with purpose.</Title>
