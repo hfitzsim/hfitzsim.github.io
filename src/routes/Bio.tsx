@@ -1,15 +1,18 @@
 import { Stack, Title, Text, SimpleGrid, Image, Button } from '@mantine/core';
 import { Resume } from '@/components';
 import { useState } from 'react';
+import img1 from '@/assets/whistler.png';
+import img2 from '@/assets/aerial_yoga.jpeg';
+import img3 from '@/assets/tulum.jpeg';
 
 const Bio = () => {
 	const [isResumeVisible, setIsResumeVisible] = useState<boolean>(false);
 	return (
 		<Stack align="center" gap={50} mt={40}>
 			<SimpleGrid cols={3}>
-				<Image src="src/assets/images/kyoto.JPG" radius={600} h={200} w={200} />
-				<Image src="src/assets/images/whistler.PNG" radius={600} h={200} w={200} />
-				<Image src="src/assets/images/tulum.JPEG" radius={600} h={200} w={200} />
+				<Image src={img1} radius={600} h={200} w={200} />
+				<Image src={img2} radius={600} h={200} w={200} />
+				<Image src={img3} radius={600} h={200} w={200} />
 			</SimpleGrid>
 
 			<Title order={2}>Designing with passion, coding with purpose.</Title>
