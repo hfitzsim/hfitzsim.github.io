@@ -8,7 +8,7 @@ interface ProjectProps {
 
 const ProjectButton: React.FC<ProjectProps> = ({ title, image, description }) => {
 	return (
-		<Card m={15} p="xl">
+		<Card m={15} p="xl" maw={550}>
 			<Stack>
 				<Card.Section>
 					<Image src={image} h={200} fit="contain" />

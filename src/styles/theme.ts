@@ -19,6 +19,8 @@ const theme = createTheme({
 	primaryShade: 5,
 	cursorType: 'pointer',
 	defaultRadius: 'sm',
+	fontFamily: 'Mulish, sans-serif',
+	headings: { fontFamily: 'Mulish, sans-serif' },
 });
 
 export { theme };

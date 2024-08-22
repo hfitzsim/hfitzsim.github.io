@@ -1,4 +1,5 @@
-import { Group } from '@mantine/core';
+import { Group, Burger, Stack, Drawer } from '@mantine/core';
+import { useMediaQuery, useDisclosure } from '@mantine/hooks';
 import { NavLink } from 'react-router-dom';
 import '@/styles/header.scss';
 
@@ -9,18 +10,32 @@ const links = [
 ];
 
 const HeaderMenu = () => {
+	const [opened, { toggle }] = useDisclosure();
+	const isXs = useMediaQuery('(max-width: 1200px)');
+	const navLinks = links.map((link) => (
+		<NavLink
+			key={link.label}
+			to={link.link}
+			className={({ isActive }) => (isActive ? 'activeLink' : 'link')}
+		>
+			{link.label}
+		</NavLink>
+	));
 	return (
-		<Group gap={40}>
-			{links.map((link) => (
-				<NavLink
-					key={link.label}
-					to={link.link}
-					className={({ isActive }) => (isActive ? 'activeLink' : 'link')}
-				>
-					{link.label}
-				</NavLink>
-			))}
-		</Group>
+		<>
+			{isXs ? (
+				<>
+					<Burger hiddenFrom={'md'} size="sm" onClick={() => toggle()} />
+					{opened && (
+						<Drawer opened={opened} onClose={toggle}>
+							<Stack>{navLinks}</Stack>
+						</Drawer>
+					)}
+				</>
+			) : (
+				<Group gap={40}>{navLinks}</Group>
+			)}
+		</>
 	);
 };
 

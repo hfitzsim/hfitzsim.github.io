@@ -27,7 +27,7 @@ const Bio = () => {
 			<Button w={150} onClick={() => setIsResumeVisible(true)}>
 				Get Resume
 			</Button>
-			{isResumeVisible && <Resume filepath="/files/H.Fitzsimmons.Resume.pdf" />}
+			{isResumeVisible && <Resume filepath="/files/HannahFitzsimmons.Resume.pdf" />}
 		</Stack>
 	);
 };

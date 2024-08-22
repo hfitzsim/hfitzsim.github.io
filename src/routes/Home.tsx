@@ -5,9 +5,11 @@ const Home = () => {
 	const navigate = useNavigate();
 
 	return (
-		<Stack align="center">
-			<Image src="src/assets/images/kyoto.JPG" radius={600} h={200} w={200} />
-			<Title order={3}>Hello! I'm Hannah, a UI/UX Developer based in Boston.</Title>
+		<Stack align="center" gap={50}>
+			<Group>
+				<Image src="src/assets/images/kyoto.JPG" radius={600} h={200} w={200} />
+				<Title order={1}>Hello! I'm Hannah, a UI/UX Developer based in Boston.</Title>
+			</Group>
 			<Group>
 				<Button onClick={() => navigate('/bio')}>About Me</Button>
 				<Button onClick={() => navigate('/projects')} variant="outline">

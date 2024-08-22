@@ -22,9 +22,9 @@ const Root = () => {
 				</Group>
 			</AppShell.Header>
 			<AppShell.Main
-				pt={100}
+				pt={200}
 				bg={getGradient(
-					{ deg: 160, from: 'rgba(255,199,72,1) 0%', to: 'rgba(237,131,214,1) 100%' },
+					{ deg: 160, from: 'rgba(255,199,72,1) 0%', to: 'rgba(237,131,230,1) 100%' },
 					theme
 				)}
 			>
