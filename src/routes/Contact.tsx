@@ -18,7 +18,7 @@ const Contact = () => {
 		},
 	});
 	return (
-		<Stack w={400}>
+		<Stack w={400} mt={50}>
 			<Group mb={50}>
 				<Button
 					variant="outline"
@@ -34,7 +34,7 @@ const Contact = () => {
 					GitHub
 				</Button>
 			</Group>
-			<Title order={2}>Send me a message:</Title>
+			<Title order={4}>Send me a message:</Title>
 			<form>
 				<Stack gap="xs">
 					<TextInput label="Name" {...form.getInputProps('name')} key={form.key('name')} />
