@@ -19,7 +19,7 @@ const Contact = () => {
 	});
 	return (
 		<Stack w={400}>
-			<Group>
+			<Group mb={50}>
 				<Button
 					variant="outline"
 					leftSection={<FontAwesomeIcon icon={faLinkedinIn} />}
@@ -36,12 +36,14 @@ const Contact = () => {
 			</Group>
 			<Title order={2}>Send me a message:</Title>
 			<form>
-				<TextInput label="Name" {...form.getInputProps('name')} key={form.key('name')} />
-				<TextInput label="Email" {...form.getInputProps('email')} key={form.key('email')} />
-				<Textarea label="Message" {...form.getInputProps('message')} key={form.key('message')} />
-				<Flex justify="flex-end" mt={30}>
-					<Button type="submit">Submit</Button>
-				</Flex>
+				<Stack gap="xs">
+					<TextInput label="Name" {...form.getInputProps('name')} key={form.key('name')} />
+					<TextInput label="Email" {...form.getInputProps('email')} key={form.key('email')} />
+					<Textarea label="Message" {...form.getInputProps('message')} key={form.key('message')} />
+					<Flex justify="flex-end">
+						<Button type="submit">Submit</Button>
+					</Flex>
+				</Stack>
 			</form>
 		</Stack>
 	);

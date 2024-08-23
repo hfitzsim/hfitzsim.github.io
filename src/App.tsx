@@ -2,6 +2,7 @@ import { MantineProvider } from '@mantine/core';
 import { theme } from '@/styles';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Root, ErrorPage, Home, Bio, Projects, Contact } from '@/routes';
+import { ProjectDetail } from '@/components';
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
 			{
 				path: '/contact',
 				element: <Contact />,
+			},
+			{
+				path: '/projects/:projectId',
+				element: <ProjectDetail />,
 			},
 		],
 	},

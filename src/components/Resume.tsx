@@ -20,7 +20,7 @@ const Resume: React.FC<ResumeProps> = ({ filepath }) => {
 	};
 
 	return (
-		<Paper shadow="xs" p="md">
+		<Paper shadow="lg" p="md">
 			<Document file={filepath} onLoadSuccess={onDocumentLoadSuccess}>
 				{Array.from(new Array(numPages), (_el, index) => (
 					<Page key={`page_${index + 1}`} pageNumber={index + 1} />

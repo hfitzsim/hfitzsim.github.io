@@ -7,7 +7,6 @@ const Root = () => {
 	const navigate = useNavigate();
 	const theme = useMantineTheme();
 	const pinned = useHeadroom({ fixedAt: 120 });
-	getGradient({ deg: 180, from: 'blue', to: 'cyan.7' }, theme);
 	return (
 		<AppShell header={{ height: 90, collapsed: !pinned, offset: false }} padding="md">
 			<AppShell.Header bg="transparent" withBorder={false} py={20} px={100}>
@@ -21,13 +20,7 @@ const Root = () => {
 					<HeaderMenu />
 				</Group>
 			</AppShell.Header>
-			<AppShell.Main
-				pt={200}
-				bg={getGradient(
-					{ deg: 160, from: 'rgba(255,199,72,1) 0%', to: 'rgba(237,131,230,1) 100%' },
-					theme
-				)}
-			>
+			<AppShell.Main pt={100}>
 				<Container fluid px={100}>
 					<Outlet />
 				</Container>

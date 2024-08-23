@@ -1,27 +1,32 @@
 import { Card, Title, Image, Text, Button, Flex, Stack } from '@mantine/core';
+import { useNavigate } from 'react-router-dom';
 
-interface ProjectProps {
+type Project = {
+	id: number;
 	title: string;
 	image: string;
 	description: string;
+};
+
+interface ProjectProps {
+	project: Project;
 }
 
-const ProjectButton: React.FC<ProjectProps> = ({ title, image, description }) => {
+const ProjectButton: React.FC<ProjectProps> = ({ project }) => {
+	const navigate = useNavigate();
 	return (
 		<Card m={15} p="xl" maw={550}>
 			<Stack>
 				<Card.Section>
-					<Image src={image} h={200} fit="contain" />
+					<Image src={project.image} h={200} fit="contain" />
 				</Card.Section>
 				<Card.Section>
-					<Title order={6}>{title}</Title>
-					<Text>{description}</Text>
+					<Title order={6}>{project.title}</Title>
+					<Text>{project.description}</Text>
 				</Card.Section>
 				<Card.Section>
 					<Flex justify="center">
-						<Button onClick={() => console.log('will redirect to /projects/:projectId')}>
-							See Project Details
-						</Button>
+						<Button onClick={() => navigate(`/projects/${project.id}`)}>See Project Details</Button>
 					</Flex>
 				</Card.Section>
 			</Stack>

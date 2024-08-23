@@ -11,12 +11,7 @@ const Projects = () => {
 				<Stack align="center">
 					<Title order={3}>Apps</Title>
 					{apps.map((app) => (
-						<ProjectButton
-							key={app.id}
-							title={app.title}
-							image={app.image}
-							description={app.description}
-						/>
+						<ProjectButton key={app.id} project={app} />
 					))}
 				</Stack>
 			</Grid.Col>
@@ -24,12 +19,7 @@ const Projects = () => {
 				<Stack align="center">
 					<Title order={3}>Design Projects</Title>
 					{designProjects.map((proj) => (
-						<ProjectButton
-							key={proj.id}
-							title={proj.title}
-							image={proj.image}
-							description={proj.description}
-						/>
+						<ProjectButton key={proj.id} project={proj} />
 					))}
 				</Stack>
 			</Grid.Col>

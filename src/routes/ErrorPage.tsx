@@ -5,7 +5,7 @@ const ErrorPage = () => {
 	const error: any = useRouteError();
 
 	return (
-		<Container>
+		<Container mt={'20vw'}>
 			<h1>Oops!</h1>
 			<p>Sorry, an unexpected error has occured.</p>
 			<p>
