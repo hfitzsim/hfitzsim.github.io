@@ -33,18 +33,18 @@ const Contact = () => {
 	});
 
 	const handleSubmit = (values: typeof form.values) => {
-		emailjs.init('a5m24FlFLLiGb_DHu');
+		emailjs.init(import.meta.env.VITE_EMAILJS_PK);
 		emailjs
 			.send(
-				'service_rbwxoxj',
-				'template_64zleeo',
+				import.meta.env.VITE_EMAILJS_SERVICE,
+				import.meta.env.VITE_EMAILJS_TEMPLATE,
 				{
 					from_name: values.name,
 					to_name: 'Hannah',
 					message: values.message,
 					reply_to: values.email,
 				},
-				'a5m24FlFLLiGb_DHu'
+				import.meta.env.VITE_EMAILJS_PK
 			)
 			.then((response) => {
 				console.log('SUCCESS!', response.status, response.text);
