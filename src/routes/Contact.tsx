@@ -56,7 +56,7 @@ const Contact = () => {
 	};
 	return (
 		<Container>
-			<Stack w={400} mt={50}>
+			<Stack maw={400} mt={50}>
 				<Group mb={50}>
 					<Button
 						variant="outline"
