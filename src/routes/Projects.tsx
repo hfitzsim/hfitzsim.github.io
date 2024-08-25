@@ -1,6 +1,6 @@
 import { Grid, Title, Stack } from '@mantine/core';
 import { ProjectButton } from '@/components';
-import data from '@/assets/data/projects.json';
+import data from '@/assets/data/projects';
 
 const Projects = () => {
 	const designProjects = data.filter((proj) => proj.type === 'design');

@@ -20,7 +20,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ project }) => {
 
 	breadcrumbs.unshift({ href: url.origin, label: 'Home' });
 
-	console.log('breadcrumbs after', breadcrumbs);
 	const crumbs = breadcrumbs.map((a, index) => {
 		return (
 			<Anchor key={index} href={a.href}>
