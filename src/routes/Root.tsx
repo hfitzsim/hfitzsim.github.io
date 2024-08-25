@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 
 const Root = () => {
 	const pinned = useHeadroom({ fixedAt: 120 });
-	const isXs = useMediaQuery('(max-width: 1024)');
+	const isXs = useMediaQuery('(max-width: 900px)');
 
 	return (
 		<AppShell header={{ height: 90, collapsed: !pinned, offset: false }} padding={isXs ? 0 : 'md'}>
