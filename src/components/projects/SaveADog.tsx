@@ -9,20 +9,14 @@ const SaveADog = () => {
 				The final design incorporates some of the original colors used on the website and gives it a
 				more modern look and feel. The logo was created with Adobe Illustrator, the navigation bar
 				is now solely at the top of the page, and the most pertinent information to potential
-				adopters is shown right on the landing page. For this project I used, Leaflet API, Angular
-				Material, and{' '}
+				adopters is shown right on the landing page. For this project I used Angular, MUI, and
+				Leaflet API.
 			</Text>
 			<figure>
 				<Image src="/assets/SaveADog-1.png" />
-				<figcaption>
-					Resdesign of SaveADog.org homepage. A PDF of the image above can be viewed{' '}
-					<a target="_blank" href="https://hfitzsim.github.io/images/ui_designs/SaveADog.pdf">
-						here.
-					</a>
-				</figcaption>
+				<figcaption>Resdesign of SaveADog.org homepage.</figcaption>
 			</figure>
 			<Text>
-				{' '}
 				In addition to resdesigning the home page, I chose to redesign the page that lists dogs
 				available for adoption. This takes a clean, minimalistic approach, showing images of each
 				dog, their name, age, and sex. This page does not include any 'back' or 'next' buttons as
@@ -31,12 +25,7 @@ const SaveADog = () => {
 			</Text>
 			<figure>
 				<Image src="/assets/SaveADog-2.png" />
-				<figcaption>
-					Redesign of SaveADog.org available dogs page. A PDF of the image above can be viewed{' '}
-					<a target="_blank" href="https://hfitzsim.github.io/images/ui_designs/SaveADog_pg2.pdf">
-						here.
-					</a>
-				</figcaption>
+				<figcaption>Redesign of SaveADog.org available dogs page.</figcaption>
 			</figure>
 		</>
 	);

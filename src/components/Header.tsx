@@ -1,31 +1,47 @@
 import { Group, Title, Burger, Stack, Drawer } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { HeaderMenu } from '@/components';
 import { NavLink, useNavigate } from 'react-router-dom';
+import projects from '@/assets/data/projects.json';
 import '@/styles/header.scss';
 
 const links = [
-	{ label: 'Bio', link: '/bio' },
-	{ label: 'Projects', link: '/projects' },
-	{ label: 'Contact', link: '/contact' },
+	{ label: 'Bio', value: '/bio' },
+	{ label: 'Projects', value: '/projects' },
+	{ label: 'Contact', value: '/contact' },
 ];
 
 interface HeaderProps {
 	size: boolean | undefined;
 }
-
 const Header: React.FC<HeaderProps> = ({ size }) => {
 	const navigate = useNavigate();
-	const [opened, { toggle }] = useDisclosure();
-	const navLinks = links.map((link) => (
-		<NavLink
-			key={link.label}
-			to={link.link}
-			className={({ isActive }) => (isActive ? 'activeLink' : 'link')}
-			onClick={() => toggle()}
-		>
-			{link.label}
-		</NavLink>
-	));
+	const [opened, { toggle, close }] = useDisclosure();
+
+	// add projects to Projects link as children
+	if (links[1].label === 'Projects' && !links[1].hasOwnProperty('children')) {
+		links[1].children = projects.map((project) => ({
+			label: project.title,
+			value: `/projects/${project.id}`,
+		}));
+	}
+
+	const navLinks = links.map((link) => {
+		if (link.hasOwnProperty('children')) {
+			return <HeaderMenu data={link} onClick={close} />;
+		}
+		return (
+			<NavLink
+				key={'link' + link.value}
+				to={link.value}
+				className={({ isActive }) => (isActive ? 'activeLink' : 'link')}
+				onClick={() => toggle()}
+			>
+				{link.label}
+			</NavLink>
+		);
+	});
+
 	return (
 		<Group justify="space-between" align="center">
 			{!size && (
