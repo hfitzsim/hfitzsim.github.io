@@ -1,4 +1,4 @@
-export * from './HeaderMenu';
+export * from './Header';
 export * from './ProjectButton';
 export * from './Resume';
 export * from './ProjectDetail';

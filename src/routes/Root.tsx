@@ -1,28 +1,20 @@
-import { AppShell, Title, Group, Container, useMantineTheme, getGradient } from '@mantine/core';
-import { useHeadroom } from '@mantine/hooks';
-import { HeaderMenu } from '@/components';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { AppShell, Container } from '@mantine/core';
+import { useHeadroom, useMediaQuery } from '@mantine/hooks';
+import { Header } from '@/components';
+import { Outlet } from 'react-router-dom';
 
 const Root = () => {
-	const navigate = useNavigate();
-	const theme = useMantineTheme();
 	const pinned = useHeadroom({ fixedAt: 120 });
+	const isXs = useMediaQuery('(max-width: 900px)');
+
 	return (
-		<AppShell header={{ height: 90, collapsed: !pinned, offset: false }} padding="md">
-			<AppShell.Header bg="transparent" withBorder={false} py={20} px={100}>
-				<Group justify="space-between" align="center">
-					<Title
-						style={{ letterSpacing: '0.5em', cursor: 'pointer' }}
-						onClick={() => navigate('/')}
-					>
-						HANNAH FITZSIMMONS
-					</Title>
-					<HeaderMenu />
-				</Group>
+		<AppShell header={{ height: 90, collapsed: !pinned, offset: false }} padding={isXs ? 0 : 'md'}>
+			<AppShell.Header bg="transparent" withBorder={false} py={20} px={isXs ? 'xs' : 'xl'}>
+				<Header size={isXs} />
 			</AppShell.Header>
 			<AppShell.Main pt={100}>
-				<Container fluid px={100}>
-					<Outlet />
+				<Container fluid px={isXs ? 'xs' : 'xl'}>
+					<Outlet context={isXs} />
 				</Container>
 			</AppShell.Main>
 		</AppShell>

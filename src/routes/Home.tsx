@@ -1,34 +1,41 @@
-import { Image, Title, Stack, Group, Button, getGradient, useMantineTheme } from '@mantine/core';
+import { Image, Title, Stack, Group, Flex, Button } from '@mantine/core';
 import img from '@/assets/kyoto.jpg';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useOutletContext } from 'react-router-dom';
 
 const Home = () => {
 	const navigate = useNavigate();
-	const theme = useMantineTheme();
-	const gradient = getGradient(
-		{ deg: 160, from: 'rgba(255,199,72,1) 0%', to: 'rgba(237,131,230,1) 100%' },
-		theme
-	);
+	const isXs = useOutletContext();
+	const buttons = () => {
+		return (
+			<>
+				<Button size="lg" onClick={() => navigate('/bio')}>
+					About Me
+				</Button>
+				<Button size="lg" onClick={() => navigate('/projects')} variant="outline">
+					See Projects
+				</Button>
+				<Button size="lg" onClick={() => navigate('/contact')}>
+					Get In Touch
+				</Button>
+			</>
+		);
+	};
 
 	return (
 		<Stack align="center" gap={75} mt={75}>
-			<Group>
+			<Group justify={isXs ? 'center' : 'flex-end'}>
 				<Image src={img} radius={600} h={200} w={200} />
-				<Title order={1}>
+				<Title order={1} style={{ textAlign: isXs ? 'center' : 'left' }}>
 					Hello! I'm Hannah, <br />
-					<span style={{ paddingLeft: '5px' }}>
+					<span style={{ paddingLeft: isXs ? 0 : '5px' }}>
 						a UI/UX Developer <br />
 					</span>
 					based in Boston.
 				</Title>
 			</Group>
-			<Group gap="xl">
-				<Button /* color={gradient} */ onClick={() => navigate('/bio')}>About Me</Button>
-				<Button /* color={gradient} */ onClick={() => navigate('/projects')} variant="outline">
-					See Projects
-				</Button>
-				<Button /* color={gradient} */ onClick={() => navigate('/contact')}>Get In Touch</Button>
-			</Group>
+			<Flex gap="xl" direction={isXs ? 'column' : 'row'}>
+				{buttons()}
+			</Flex>
 		</Stack>
 	);
 };
