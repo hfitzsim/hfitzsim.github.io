@@ -2,6 +2,7 @@ export * from './Header';
 export * from './ProjectButton';
 export * from './Resume';
 export * from './ProjectDetail';
+export * from './Breadcrumb';
 
 /** PROJECTS */
 export * from './projects/EventTracker';

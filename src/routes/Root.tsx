@@ -17,6 +17,7 @@ const Root = () => {
 					<Outlet context={isXs} />
 				</Container>
 			</AppShell.Main>
+			<AppShell.Footer h={10}></AppShell.Footer>
 		</AppShell>
 	);
 };

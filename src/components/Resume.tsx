@@ -20,12 +20,14 @@ const Resume: React.FC<ResumeProps> = ({ filepath }) => {
 	};
 
 	return (
-		<Paper shadow="lg" p="md">
-			<Document file={filepath} onLoadSuccess={onDocumentLoadSuccess}>
-				{Array.from(new Array(numPages), (_el, index) => (
-					<Page key={`page_${index + 1}`} pageNumber={index + 1} />
-				))}
-			</Document>
+		<Paper shadow="lg" p="md" maw="auto">
+			<div style={{ width: '100%' }}>
+				<Document file={filepath} onLoadSuccess={onDocumentLoadSuccess}>
+					{Array.from(new Array(numPages), (_el, index) => (
+						<Page key={`page_${index + 1}`} pageNumber={index + 1} />
+					))}
+				</Document>
+			</div>
 		</Paper>
 	);
 };

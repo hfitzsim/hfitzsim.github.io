@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import projects from '@/assets/data/projects.json';
 import { Title } from '@mantine/core';
 import { useState, useEffect } from 'react';
-import { EventTracker, TheSill, SaveADog, MountainMatrix } from '@/components';
+import { Breadcrumb, EventTracker, TheSill, SaveADog, MountainMatrix } from '@/components';
 
 const ProjectDetail = () => {
 	const { projectId } = useParams();
@@ -34,7 +34,10 @@ const ProjectDetail = () => {
 
 	return (
 		<>
-			<Title order={2}>{project!.title}</Title>
+			<Breadcrumb project={project!.title} />
+			<Title order={2} style={{ textAlign: 'center' }}>
+				{project!.title}
+			</Title>
 			{projectToRender}
 		</>
 	);
