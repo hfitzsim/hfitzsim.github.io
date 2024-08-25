@@ -10,10 +10,13 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ project }) => {
 	const url = new URL(window.location.href);
 	const breadcrumbs: { href: string; label: string }[] = [];
 
-	const pathParts = url.pathname.split('/').filter((part) => part !== '');
+	const pathParts = url.hash
+		.replace(/^#/, '')
+		.split('/')
+		.filter((part) => part !== '');
 
 	pathParts.forEach((part, index) => {
-		const href = '/' + pathParts.slice(0, index + 1).join('/');
+		const href = '#' + pathParts.slice(0, index + 1).join('/');
 		const label = part === '' ? 'Home' : Number.isInteger(Number(part)) ? project : 'Projects';
 		breadcrumbs.push({ href, label });
 	});
