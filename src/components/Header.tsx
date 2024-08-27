@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ size }) => {
 
 			{size ? (
 				<>
-					<Burger hiddenFrom={'md'} size="sm" onClick={() => toggle()} />
+					<Burger hiddenFrom={'md'} size="lg" onClick={() => toggle()} />
 					{opened && (
 						<Drawer opened={opened} onClose={toggle}>
 							<Stack>

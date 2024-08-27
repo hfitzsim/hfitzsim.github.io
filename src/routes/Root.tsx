@@ -13,7 +13,7 @@ const Root = () => {
 				<Header size={isXs} />
 			</AppShell.Header>
 			<AppShell.Main pt={100}>
-				<Container fluid px={isXs ? 'xs' : 'xl'}>
+				<Container fluid px={isXs ? 'xs' : 'xl'} mb="xl">
 					<Outlet context={isXs} />
 				</Container>
 			</AppShell.Main>

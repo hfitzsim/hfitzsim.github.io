@@ -22,7 +22,7 @@ const Home = () => {
 	};
 
 	return (
-		<Stack align="center" gap={75} mt={75}>
+		<Stack align="center" gap="xl" mt="lg">
 			<Group justify={isXs ? 'center' : 'flex-end'}>
 				<Image src={img} radius={600} h={200} w={200} />
 				<Title order={1} style={{ textAlign: isXs ? 'center' : 'left' }}>
