@@ -14,7 +14,7 @@ const Root = () => {
 			</AppShell.Header>
 			<AppShell.Main pt={100}>
 				<Container fluid px={isXs ? 'xs' : 'xl'} mb="xl">
-					<Outlet context={isXs} />
+					<Outlet context={{ isXs }} />
 				</Container>
 			</AppShell.Main>
 			<AppShell.Footer h={10}></AppShell.Footer>

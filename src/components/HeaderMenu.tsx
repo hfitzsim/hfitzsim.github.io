@@ -1,8 +1,8 @@
-import { Button, Collapse, Stack } from '@mantine/core';
+import { Group, Collapse, Stack } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { useOutletContext } from 'react-router-dom';
 
 interface HeaderMenuProps {
@@ -15,38 +15,34 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ data, onClick }) => {
 	const isXs = useOutletContext();
 
 	return (
-		<div style={{ position: 'relative' }}>
-			<Button
-				variant="transparent"
-				justify="space-between"
-				rightSection={
-					isXs ? (
-						<FontAwesomeIcon
-							icon={faChevronRight}
-							style={{ transform: opened ? 'rotate(-90deg)' : 'none' }}
-						/>
-					) : null
-				}
-				size="xl"
-				p={0}
-				fw={600}
-				onClick={toggle}
-			>
-				{data.label}
-			</Button>
+		<Stack gap={0}>
+			<Group onClick={toggle}>
+				<NavLink to={'#'} className="link" onClick={(event) => event.preventDefault()}>
+					{data.label}
+				</NavLink>
+				<FontAwesomeIcon
+					icon={faChevronDown}
+					style={{ transform: opened ? 'rotate(-180deg)' : 'none' }}
+				/>
+			</Group>
+
 			<Collapse
 				in={opened}
 				p={10}
+				mt={isXs ? 0 : 50}
 				miw={200}
 				maw={500}
 				style={{
 					position: isXs ? 'relative' : 'absolute',
 					zIndex: 1000,
 					backgroundColor: 'white',
-					border: '1px solid #333333',
+					border: isXs ? '1px solid #d3d3d3' : 'none',
 				}}
 			>
 				<Stack ml={isXs ? 30 : 0} mt={-10} style={{ width: '100%' }}>
+					<NavLink key={'link' + data.value} to={data.value} className="link" onClick={onClick}>
+						{'All ' + data.label}
+					</NavLink>
 					{data.children.map((child: any) => (
 						<NavLink
 							key={'link' + child.value}
@@ -59,7 +55,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ data, onClick }) => {
 					))}
 				</Stack>
 			</Collapse>
-		</div>
+		</Stack>
 	);
 };
 
