@@ -31,6 +31,7 @@ const Header: React.FC<HeaderProps> = ({ size }) => {
 			return <HeaderMenu data={link} onClick={close} />;
 		}
 		return (
+			// if there are no children projects to display
 			<NavLink
 				key={'link' + link.value}
 				to={link.value}
