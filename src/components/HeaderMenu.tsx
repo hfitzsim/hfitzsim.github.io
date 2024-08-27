@@ -14,8 +14,6 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ data, onClick }) => {
 	const [opened, { toggle }] = useDisclosure(false);
 	const isXs = useOutletContext();
 
-	console.log('isXs?', isXs);
-
 	return (
 		<Stack gap={0}>
 			<Group onClick={toggle}>
