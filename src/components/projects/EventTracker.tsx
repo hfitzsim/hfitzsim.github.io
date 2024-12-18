@@ -5,9 +5,11 @@ const EventTracker = () => {
 		<>
 			<Text>
 				This project was for a Web App Development class. We were to create an application using
-				HTMl, CSS, and JavaScript. The biggest challenge for this class was creating a login system
-				and having to teach myself PHP and MySQL. I went with a clean and simple look and feel for
-				the design of each page.
+				HTMl, CSS, and JavaScript. I was inspired by my event coordinating job as Assistant to the
+				Dean at BU and build this event tracker application. The biggest challenge of this project
+				was creating a login system and having to teach myself PHP and MySQL. The project did not
+				require a database or backend server, but I was determined to make this a full stack
+				application. I went with a clean, simple look and feel for the design of each page.
 			</Text>
 			<figure>
 				<Image src="/assets/event-tracker-add-event.png" />

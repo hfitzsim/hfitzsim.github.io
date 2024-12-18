@@ -6,11 +6,10 @@ const SaveADog = () => {
 			<h4>Website Redesign</h4>
 			<Text>
 				This project is a redesign of the website <a href="https://saveadog.org/">SaveADog.org. </a>
-				The final design incorporates some of the original colors used on the website and gives it a
-				more modern look and feel. The logo was created with Adobe Illustrator, the navigation bar
-				is now solely at the top of the page, and the most pertinent information to potential
-				adopters is shown right on the landing page. For this project I used Angular, MUI, and
-				Leaflet API.
+				The final design incorporates the site's original color palette but gives it a modern look
+				and feel. The logo was created with Adobe Illustrator, the navigation bar follows standard
+				conventions and run across the top of the page, and the most pertinent information to
+				potential adopters is shown right on the landing page.
 			</Text>
 			<figure>
 				<Image src="/assets/SaveADog-1.png" />
@@ -19,9 +18,9 @@ const SaveADog = () => {
 			<Text>
 				In addition to resdesigning the home page, I chose to redesign the page that lists dogs
 				available for adoption. This takes a clean, minimalistic approach, showing images of each
-				dog, their name, age, and sex. This page does not include any 'back' or 'next' buttons as
-				users can scroll to see all dogs. Contact information remains visible in the footer until
-				all dogs have loaded and can be viewed.{' '}
+				dog's name, age, etc. In practice, this page would not include any 'back' or 'next' buttons
+				as users can "infinitely scroll" to see all dogs. Contact information remains visible in the
+				footer until all dogs have loaded and can be viewed.{' '}
 			</Text>
 			<figure>
 				<Image src="/assets/SaveADog-2.png" />
