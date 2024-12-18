@@ -4,9 +4,10 @@ const MountainMatrix = () => {
 	return (
 		<>
 			<Text>
-				This project was my introducton to Angular. The goal was to design different views for users
-				to compare ski resort mountains stats to choose which resort to go to on a particular day. I
-				designed the logo with Adobe Illustrator and created four different pages.
+				The purpose of this project was to design and implement different views for users to compare
+				ski resort statistics to choose which resort to go to on a particular day. I designed the
+				logo with Adobe Illustrator and developed four different pages. This project was built with
+				Angular, Angular Materiial and the Leaflet API.
 			</Text>
 			<figure>
 				<Image src="/assets/mtn-matrix-dashboard.png" />
