@@ -10,19 +10,21 @@ const Root = () => {
 	const location = useLocation();
 	return (
 		<AppShell
-			header={{ height: 90, collapsed: !pinned, offset: false }}
+			header={{ height: location.pathname !== '/' ? 90 : 0, collapsed: !pinned, offset: false }}
 			padding={isXs ? 0 : 'md'}
 			bg={'isabelline'}
 		>
-			<AppShell.Header bg="isabelline" withBorder={false} py={20} px={isXs ? 'xs' : 'xl'}>
-				{location.pathname !== '/' && <Header size={isXs} />}
-			</AppShell.Header>
-			<AppShell.Main pt={100}>
+			{location.pathname !== '/' && (
+				<AppShell.Header bg="isabelline" withBorder={false} py={20} px={isXs ? 'xs' : 'xl'}>
+					<Header size={isXs} />
+				</AppShell.Header>
+			)}
+
+			<AppShell.Main pt={location.pathname !== '/' ? 90 : 10}>
 				<Container fluid px={isXs ? 'xs' : 'xl'} mb="xl">
 					<Outlet context={{ isXs }} />
 				</Container>
 			</AppShell.Main>
-			<AppShell.Footer h={10}></AppShell.Footer>
 		</AppShell>
 	);
 };

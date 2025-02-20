@@ -30,21 +30,21 @@ const Bio = () => {
 				Designing with passion, coding with purpose.
 			</Title>
 
-			<Text style={{ textAlign: 'center' }}>
-				A full stack web engineer with a passion for UI/UX design, I bring a blend of creativity and
+			<Text style={{ textAlign: 'left' }} maw={800}>
+				Hannah is a UI/UX developer with a passion for design. She brings a blend of creativity and
 				technical expertise to every project. With a Bachelor’s in Operations and Information
-				Management and a Master’s in Computer Information Systems, I’ve honed my skills in web app
-				and mobile development. I've led the development of innovative mobile and web-based software
-				solutions that enhance operational readiness and management capabilities for diverse
-				systems, meeting the needs of global users. I have crafted UI mockups and translated them
-				into functional applications. My journey through retail and hospitality taught me the value
-				of making someone's day better, a principle I carry into my work every day. Outside of work,
-				I love snowboarding, crocheting amigurumi, exploring new places, and trying new activities
-				and restaurants with friends.
+				Management and a Master’s in Computer Information Systems, she honed her skills in web app
+				development. She's led the development of innovative mobile and web-based software solutions
+				that enhance operational readiness and management capabilities for diverse systems, meeting
+				needs and expectations of global users. She's crafted wireframes and mockups and translated
+				them into functional applications. Her journey through retail and hospitality taught her the
+				value of making someone's day better, a principle she carries into work every day. Outside
+				of work, she can be found snowboarding, crocheting amigurumi, exploring new places, and
+				trying new activities with friends.
 			</Text>
 
 			<Button w={150} onClick={() => setIsResumeVisible(true)}>
-				Get Resume
+				See Resume
 			</Button>
 			{isResumeVisible && <Resume filepath="/files/HannahFitzsimmons.Resume.pdf" />}
 		</Stack>
