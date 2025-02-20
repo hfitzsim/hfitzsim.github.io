@@ -1,7 +1,7 @@
 import { MantineProvider } from '@mantine/core';
 import { theme } from '@/styles';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
-import { Root, ErrorPage, Home, Bio, Projects, Contact } from '@/routes';
+import { Root, ErrorPage, Home, Projects, Contact } from '@/routes';
 import { ProjectDetail } from '@/components';
 
 const router = createHashRouter([
@@ -13,10 +13,6 @@ const router = createHashRouter([
 			{
 				index: true,
 				element: <Home />,
-			},
-			{
-				path: '/bio',
-				element: <Bio />,
 			},
 			{
 				path: '/projects',

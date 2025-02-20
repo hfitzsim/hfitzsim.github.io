@@ -8,6 +8,7 @@ import {
 	Button,
 	TextInput,
 	Textarea,
+	Loader,
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,6 +18,7 @@ import { useState } from 'react';
 
 const Contact = () => {
 	const [isNotificationVisible, setIsNotifcationVisible] = useState<boolean>(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const form = useForm({
 		mode: 'uncontrolled',
@@ -33,6 +35,7 @@ const Contact = () => {
 	});
 
 	const handleSubmit = (values: typeof form.values) => {
+		setIsSubmitting(true);
 		emailjs.init(import.meta.env.VITE_EMAILJS_PK);
 		emailjs
 			.send(
@@ -52,6 +55,9 @@ const Contact = () => {
 			})
 			.catch((err) => {
 				console.log('FAILED...', err);
+			})
+			.finally(() => {
+				setIsSubmitting(false);
 			});
 	};
 	return (
@@ -83,14 +89,16 @@ const Contact = () => {
 							key={form.key('message')}
 						/>
 						<Flex justify="flex-end">
-							<Button type="submit">Submit</Button>
+							<Button type="submit" disabled={isSubmitting}>
+								{isSubmitting ? <Loader type="dots" /> : 'Submit'}
+							</Button>
 						</Flex>
 					</Stack>
 				</form>
 			</Stack>
 			{isNotificationVisible && (
-				<Box mt={25} c="green" style={{ borderRadius: '5px', fontWeight: 700 }}>
-					Thank you for your message! I'll reply when I see it :)
+				<Box mt={25} c="jet" style={{ borderRadius: '5px', fontWeight: 700 }}>
+					Thank you for your message!
 				</Box>
 			)}
 		</Container>

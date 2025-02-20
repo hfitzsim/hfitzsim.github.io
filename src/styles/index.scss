@@ -1,3 +1,9 @@
+$vermillion: #f5433d;
+$isabelline: #f4f0ec;
+$jet: #363635;
+$cherry-blossom-pink: #f8c1c1;
+$air-superiority-blue: #87ceeb;
+
 *,
 p,
 h1,
@@ -12,4 +18,19 @@ h6 {
 body {
 	margin: 0;
 	padding: 0;
+}
+
+.activeLink {
+	text-decoration: none;
+	color: $vermillion;
+	font-weight: 900;
+	font-size: 1.25rem;
+	border-bottom: 1px solid $vermillion;
+}
+
+.link {
+	text-decoration: none;
+	color: $vermillion;
+	font-weight: 600;
+	font-size: 1.25rem;
 }
