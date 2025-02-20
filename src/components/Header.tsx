@@ -1,4 +1,4 @@
-import { Group, Title, Burger, Stack, Drawer } from '@mantine/core';
+import { Group, Title, Text, Burger, Stack, Drawer } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { HeaderMenu } from '@/components';
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -44,10 +44,20 @@ const Header: React.FC<HeaderProps> = ({ size }) => {
 	});
 
 	return (
-		<Group justify="space-between" align="center">
+		<Group justify="space-between" align="center" bg="isabelline">
 			{!size && (
-				<Title style={{ letterSpacing: '0.5em', cursor: 'pointer' }} onClick={() => navigate('/')}>
-					HANNAH FITZSIMMONS
+				<Title
+					order={1}
+					style={{ letterSpacing: '0.5em', cursor: 'pointer' }}
+					c={'vermillion'}
+					onClick={() => navigate('/')}
+				>
+					<Text span inherit fw={900}>
+						HANNAH{' '}
+					</Text>
+					<Text span inherit fw={300}>
+						FITZSIMMONS
+					</Text>
 				</Title>
 			)}
 

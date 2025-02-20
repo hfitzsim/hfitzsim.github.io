@@ -32,10 +32,10 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ data, onClick }) => {
 				mt={isXs ? 0 : 50}
 				miw={200}
 				maw={500}
+				bg={'isabelline'}
 				style={{
 					position: isXs ? 'relative' : 'absolute',
 					zIndex: 1000,
-					backgroundColor: 'white',
 					border: isXs ? '1px solid #d3d3d3' : 'none',
 				}}
 			>
