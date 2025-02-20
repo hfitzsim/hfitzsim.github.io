@@ -1,42 +1,33 @@
-import { Text, Image } from '@mantine/core';
+import { Stack, Flex, Text, Button, Anchor, List, Image, Space } from '@mantine/core';
+import screenshot from '@/assets/mm-dashboard.png';
 
 const MountainMatrix = () => {
 	return (
-		<>
-			<Text>
-				The purpose of this project was to design and implement different views for users to compare
-				ski resort statistics to choose which resort to go to on a particular day. I designed the
-				logo with Adobe Illustrator and developed four different pages. This project was built with
-				Angular, Angular Material and the Leaflet API.
+		<Stack gap="sm" align="center">
+			<Image src={screenshot} h={'auto'} maw={900} mt={20} />
+
+			<Flex justify="center" m={20}>
+				<Anchor href="https://hfitzsim.dev/mountain-matrix" target="_blank">
+					<Button>See Live Demo</Button>
+				</Anchor>
+			</Flex>
+			<Text maw={800}>
+				For this project, I designed and implemented different views for users to compare ski resort
+				statistics. This would help with decision paralysis that can occur when trying to choose a
+				resort to go to on a particular day. I designed the logo with Adobe Illustrator and
+				developed a total of four different views:
+				<Space />
+				<List ml={30} my={15}>
+					<List.Item>Dashboard</List.Item>
+					<List.Item>Resort Search / Detail View</List.Item>
+					<List.Item>Resort Comparison View</List.Item>
+					<List.Item>Map View</List.Item>
+				</List>
+				This project was built with Angular, Angular Material, and the Leaflet API. The data
+				localized to the north east of the US, some of the ski resorts I have visited frequently.
+				There is one entry for Whistler Blackcomb because it is my favorite.
 			</Text>
-			<figure>
-				<Image src="/assets/mtn-matrix-dashboard.png" />
-				<figcaption>Dashboard / homepage of Mountain Matrix app</figcaption>
-			</figure>
-			<figure>
-				<Image src="/assets/mtn-matrix-mtn-search.png" />
-				<figcaption>
-					View to see all mountains and search for mountains. This used ng2-search-filter, a pipe,
-					to search the data from user input.
-				</figcaption>
-			</figure>
-			<figure>
-				<Image src="/assets/mtn-matrix-mtn-detail.png" />
-				<figcaption>Individual Mountain detail view.</figcaption>
-			</figure>
-			<figure>
-				<Image src="/assets/mtn-matrix-map.png" />
-				<figcaption>Map view of ski resorts in the north east region.</figcaption>
-			</figure>
-			<figure>
-				<Image src="/assets/mtn-matrix-compare.png" />
-				<figcaption>This view is used to compare two mountains' data points.</figcaption>
-			</figure>
-			<figure>
-				<Image src="/assets/mtn-matrix-compare2.png" />
-				<figcaption> The selectable mountains are populated dynamically.</figcaption>
-			</figure>
-		</>
+		</Stack>
 	);
 };
 

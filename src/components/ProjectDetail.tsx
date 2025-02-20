@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import projects from '@/assets/data/projects.json';
-import { Title } from '@mantine/core';
+import { Title, Container } from '@mantine/core';
 import { useState, useEffect } from 'react';
 import { Breadcrumb, EventTracker, TheSill, SaveADog, MountainMatrix } from '@/components';
 
