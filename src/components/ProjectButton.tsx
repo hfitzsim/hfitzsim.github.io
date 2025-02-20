@@ -15,7 +15,7 @@ interface ProjectProps {
 const ProjectButton: React.FC<ProjectProps> = ({ project }) => {
 	const navigate = useNavigate();
 	return (
-		<Card m={15} p="xl" maw={550}>
+		<Card m={15} p="xl" maw={550} bg={'isabelline'}>
 			<Stack>
 				<Card.Section>
 					<Image src={project.image} h={200} fit="contain" />

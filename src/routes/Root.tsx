@@ -2,15 +2,20 @@ import { AppShell, Container } from '@mantine/core';
 import { useHeadroom, useMediaQuery } from '@mantine/hooks';
 import { Header } from '@/components';
 import { Outlet } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Root = () => {
 	const pinned = useHeadroom({ fixedAt: 120 });
 	const isXs = useMediaQuery('(max-width: 900px)');
-
+	const location = useLocation();
 	return (
-		<AppShell header={{ height: 90, collapsed: !pinned, offset: false }} padding={isXs ? 0 : 'md'}>
-			<AppShell.Header bg="transparent" withBorder={false} py={20} px={isXs ? 'xs' : 'xl'}>
-				<Header size={isXs} />
+		<AppShell
+			header={{ height: 90, collapsed: !pinned, offset: false }}
+			padding={isXs ? 0 : 'md'}
+			bg={'isabelline'}
+		>
+			<AppShell.Header bg="isabelline" withBorder={false} py={20} px={isXs ? 'xs' : 'xl'}>
+				{location.pathname !== '/' && <Header size={isXs} />}
 			</AppShell.Header>
 			<AppShell.Main pt={100}>
 				<Container fluid px={isXs ? 'xs' : 'xl'} mb="xl">
