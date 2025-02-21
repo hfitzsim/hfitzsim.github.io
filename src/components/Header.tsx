@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ isXs }) => {
 	return (
 		<Group justify="space-between" align="center" bg="isabelline">
 			{isXs ? (
-				<Stack gap={0} style={{ cursor: 'pointer' }}>
+				<Stack gap={0} style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
 					<Text c={'vermillion'} style={{ fontWeight: '900', letterSpacing: '0.45em' }}>
 						<span style={{ fontWeight: '900', letterSpacing: '0.45em' }}>HANNAH </span>
 					</Text>
