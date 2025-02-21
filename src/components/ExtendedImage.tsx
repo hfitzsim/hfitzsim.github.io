@@ -22,7 +22,11 @@ const ExtendedImage: React.FC<ImageProps> = (props) => {
 
 	return (
 		<>
-			<Image {...props} onClick={() => handlers.open()} />
+			<Image
+				{...props}
+				onClick={() => handlers.open()}
+				style={{ display: 'block', margin: 0, padding: 0 }}
+			/>
 			<Modal
 				{...modalProps}
 				withOverlay
@@ -31,8 +35,16 @@ const ExtendedImage: React.FC<ImageProps> = (props) => {
 				centered
 				withCloseButton={false}
 				p={0}
+				style={{
+					position: 'absolute',
+					top: '0',
+					left: '0',
+					right: '0',
+					bottom: '0',
+					zIndex: opened ? 200 : -1,
+				}}
 			>
-				<Image src={props.src} fit="contain" m={0} />
+				<Image src={props.src} fit="contain" m={0} style={{ display: 'block' }} />
 			</Modal>
 		</>
 	);
