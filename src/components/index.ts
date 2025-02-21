@@ -4,6 +4,7 @@ export * from './Resume';
 export * from './ProjectDetail';
 export * from './Breadcrumb';
 export * from './ExtendedImage';
+export * from './ImageRotator';
 
 /** PROJECTS */
 export * from './projects/EventTracker';

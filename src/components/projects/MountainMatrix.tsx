@@ -30,10 +30,12 @@ const MountainMatrix: React.FC<ProjectProps> = ({ title }) => {
 					<List.Item>Resort Comparison View</List.Item>
 					<List.Item>Map View</List.Item>
 				</List>
-				This project was built with Angular, Angular Material, and the Leaflet API. The data use for
-				the app is localized to the north east of the United States, including many ski resorts I
-				have visited frequently for snowboarding. There is one entry for Whistler Blackcomb in BC,
-				Canada because it is my favorite.
+				This project was built with{' '}
+				<Text span fw={700}>
+					Angular, Angular Material, and the Leaflet API
+				</Text>
+				. The mock data provided is primarily localized to the Northeastern US, with one
+				exception—Whistler Blackcomb in BC, Canada—because it's my absolute favorite.
 			</Text>
 		</Stack>
 	);

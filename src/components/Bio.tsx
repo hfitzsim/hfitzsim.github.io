@@ -1,22 +1,12 @@
-import { Stack, Title, Text, SimpleGrid, Image, Button } from '@mantine/core';
-import { Resume } from '@/components';
-import { useImageRotator } from '@/hooks';
+import { Stack, Title, Text, Button } from '@mantine/core';
+import { Resume, ImageRotator } from '@/components';
 import { useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
-import img1 from '@/assets/whistler.png';
-import img2 from '@/assets/aerial_yoga.jpeg';
-import img3 from '@/assets/tulum.jpeg';
-
-const first = [img1, img2, img3];
-const second = [img2, img3, img1];
-const last = [img3, img1, img2];
 
 const Bio = () => {
 	const [isResumeVisible, setIsResumeVisible] = useState<boolean>(false);
 	const isXs = useOutletContext();
-	const left = useImageRotator(first);
-	const middle = useImageRotator(second);
-	const right = useImageRotator(last);
+	// const { currentImage, direction } = useImageRotator(images);
 
 	const handleGetResumeClick = () => {
 		isXs ? window.open('/files/HannahFitzsimmons.Resume.pdf', '_blank') : setIsResumeVisible(true);
@@ -28,11 +18,7 @@ const Bio = () => {
 				Designing with passion, coding with purpose.
 			</Title>
 
-			<SimpleGrid cols={5} style={{ left: isXs ? -150 : 0 }} maw={300}>
-				<Image src={left} radius={600} h={200} w={200} />
-				<Image src={middle} radius={600} h={200} w={200} />
-				<Image src={right} radius={600} h={200} w={200} />
-			</SimpleGrid>
+			<ImageRotator />
 
 			<Text style={{ textAlign: isXs ? 'center' : 'left' }} maw={800}>
 				Hannah is a{' '}
@@ -56,7 +42,7 @@ const Bio = () => {
 					value of making someone's day better
 				</Text>{' '}
 				, a principle she carries into work every day. Outside of work, she can be found{' '}
-				snowboarding, crocheting amigruumi, exploring new places, and trying new activities with
+				snowboarding, crocheting amigrumi, exploring new places, and trying new activities with
 				friends.
 			</Text>
 
