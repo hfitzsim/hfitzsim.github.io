@@ -1,4 +1,5 @@
-import { Stack, Title, Text, Button } from '@mantine/core';
+import { Stack, Title, Text, Button, Space, Paper } from '@mantine/core';
+import { useScrollIntoView } from '@mantine/hooks';
 import { Resume, ImageRotator } from '@/components';
 import { useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
@@ -6,10 +7,17 @@ import { useOutletContext } from 'react-router-dom';
 const Bio = () => {
 	const [isResumeVisible, setIsResumeVisible] = useState<boolean>(false);
 	const isXs = useOutletContext();
-	// const { currentImage, direction } = useImageRotator(images);
+
+	const { scrollIntoView, targetRef } = useScrollIntoView({
+		offset: -10, // optional: additional distance between the nearest edge and element
+		duration: 500, // optional: duration of the scroll in ms
+	});
 
 	const handleGetResumeClick = () => {
 		isXs ? window.open('/files/HannahFitzsimmons.Resume.pdf', '_blank') : setIsResumeVisible(true);
+		if (isResumeVisible) {
+			scrollIntoView();
+		}
 	};
 
 	return (
@@ -37,10 +45,12 @@ const Bio = () => {
 					meeting the needs and expectations
 				</Text>{' '}
 				of global users. She's crafted wireframes and mockups and translated them into functional
-				applications. Her journey through retail and hospitality taught her the{' '}
+				applications.
+				<Space h="md" />
+				Her journey through retail and hospitality taught her the{' '}
 				<Text span fw={700}>
 					value of making someone's day better
-				</Text>{' '}
+				</Text>
 				, a principle she carries into work every day. Outside of work, she can be found{' '}
 				snowboarding, crocheting amigrumi, exploring new places, and trying new activities with
 				friends.
@@ -49,7 +59,11 @@ const Bio = () => {
 			<Button w={150} onClick={handleGetResumeClick}>
 				Get Resume
 			</Button>
-			{isResumeVisible && <Resume filepath="/files/HannahFitzsimmons.Resume.pdf" />}
+			{isResumeVisible && (
+				<Paper shadow="lg" p="md" maw="auto" ref={targetRef}>
+					<Resume filepath="/files/HannahFitzsimmons.Resume.pdf" />
+				</Paper>
+			)}
 		</Stack>
 	);
 };
