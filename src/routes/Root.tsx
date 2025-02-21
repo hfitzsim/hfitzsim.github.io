@@ -3,6 +3,7 @@ import { useHeadroom, useMediaQuery } from '@mantine/hooks';
 import { Header } from '@/components';
 import { Outlet } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { App } from '@/App';
 
 const Root = () => {
 	const pinned = useHeadroom({ fixedAt: 120 });
@@ -16,7 +17,7 @@ const Root = () => {
 		>
 			{location.pathname !== '/' && (
 				<AppShell.Header bg="isabelline" withBorder={false} py={20} px={isXs ? 'xs' : 'xl'}>
-					<Header size={isXs} />
+					<Header isXs={isXs} />
 				</AppShell.Header>
 			)}
 
@@ -25,6 +26,12 @@ const Root = () => {
 					<Outlet context={isXs} />
 				</Container>
 			</AppShell.Main>
+			<AppShell.Footer
+				bg="isabelline"
+				withBorder={false}
+				py={20}
+				px={isXs ? 'xs' : 'xl'}
+			></AppShell.Footer>
 		</AppShell>
 	);
 };

@@ -1,17 +1,19 @@
 import { Text, Image, Title } from '@mantine/core';
+import { useOutletContext } from 'react-router-dom';
 
 interface ProjectProps {
 	title: string;
 }
 
 const SaveADog: React.FC<ProjectProps> = ({ title }) => {
+	const isXs = useOutletContext();
 	return (
 		<>
 			<Title order={2} style={{ textAlign: 'center' }}>
 				{title}
 			</Title>
-			<h4>Website Redesign</h4>
-			<Text>
+			<h4 style={{ textAlign: 'center' }}>Website Redesign</h4>
+			<Text style={{ textAlign: isXs ? 'center' : 'left' }}>
 				This project is a redesign of the website <a href="https://saveadog.org/">SaveADog.org. </a>
 				The final design incorporates the site's original color palette but gives it a modern look
 				and feel. The logo was created with Adobe Illustrator, the navigation bar follows standard
@@ -19,10 +21,9 @@ const SaveADog: React.FC<ProjectProps> = ({ title }) => {
 				potential adopters is shown right on the landing page.
 			</Text>
 			<figure>
-				<Image src="/assets/SaveADog-1.png" />
-				<figcaption>Resdesign of SaveADog.org homepage.</figcaption>
+				<Image src="/assets/SaveADog-1.png" alt="Resdesign of SaveADog.org homepage." />
 			</figure>
-			<Text>
+			<Text style={{ textAlign: isXs ? 'center' : 'left' }}>
 				In addition to resdesigning the home page, I chose to redesign the page that lists dogs
 				available for adoption. This takes a clean, minimalistic approach, showing images of each
 				dog's name, age, etc. In practice, this page would not include any 'back' or 'next' buttons
@@ -30,8 +31,7 @@ const SaveADog: React.FC<ProjectProps> = ({ title }) => {
 				footer until all dogs have loaded and can be viewed.{' '}
 			</Text>
 			<figure>
-				<Image src="/assets/SaveADog-2.png" />
-				<figcaption>Redesign of SaveADog.org available dogs page.</figcaption>
+				<Image src="/assets/SaveADog-2.png" alt="Redesign of SaveADog.org available dogs page." />
 			</figure>
 		</>
 	);

@@ -24,13 +24,21 @@ body {
 	text-decoration: none;
 	color: $vermillion;
 	font-weight: 900;
-	font-size: 1.25rem;
+	font-size: 1.25em;
 	border-bottom: 1px solid $vermillion;
+
+	@media (max-width: 600px) {
+		font-size: 1em;
+	}
 }
 
 .link {
 	text-decoration: none;
 	color: $vermillion;
 	font-weight: 600;
-	font-size: 1.25rem;
+	font-size: 1.25em;
+
+	@media (max-width: 600px) {
+		font-size: 1em;
+	}
 }

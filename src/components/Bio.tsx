@@ -18,19 +18,23 @@ const Bio = () => {
 	const middle = useImageRotator(second);
 	const right = useImageRotator(last);
 
+	const handleGetResumeClick = () => {
+		isXs ? window.open('/files/HannahFitzsimmons.Resume.pdf', '_blank') : setIsResumeVisible(true);
+	};
+
 	return (
 		<Stack align="center" gap={50} mt={40} justify={isXs ? 'center' : 'flex-start'}>
+			<Title order={2} style={{ textAlign: isXs ? 'center' : 'left' }}>
+				Designing with passion, coding with purpose.
+			</Title>
+
 			<SimpleGrid cols={5} style={{ left: isXs ? -150 : 0 }} maw={300}>
 				<Image src={left} radius={600} h={200} w={200} />
 				<Image src={middle} radius={600} h={200} w={200} />
 				<Image src={right} radius={600} h={200} w={200} />
 			</SimpleGrid>
 
-			<Title order={2} style={{ textAlign: isXs ? 'center' : 'left' }}>
-				Designing with passion, coding with purpose.
-			</Title>
-
-			<Text style={{ textAlign: 'left' }} maw={800}>
+			<Text style={{ textAlign: isXs ? 'center' : 'left' }} maw={800}>
 				Hannah is a{' '}
 				<Text span fw={700}>
 					UI/UX developer
@@ -56,8 +60,8 @@ const Bio = () => {
 				friends.
 			</Text>
 
-			<Button w={150} onClick={() => setIsResumeVisible(true)}>
-				See Resume
+			<Button w={150} onClick={handleGetResumeClick}>
+				Get Resume
 			</Button>
 			{isResumeVisible && <Resume filepath="/files/HannahFitzsimmons.Resume.pdf" />}
 		</Stack>
