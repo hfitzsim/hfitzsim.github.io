@@ -31,16 +31,23 @@ const Bio = () => {
 			</Title>
 
 			<Text style={{ textAlign: 'left' }} maw={800}>
-				Hannah is a UI/UX developer with a passion for design. She brings a blend of creativity and
-				technical expertise to every project. With a Bachelor’s in Operations and Information
-				Management and a Master’s in Computer Information Systems, she honed her skills in web app
-				development. She's led the development of innovative mobile and web-based software solutions
-				that enhance operational readiness and management capabilities for diverse systems, meeting
-				needs and expectations of global users. She's crafted wireframes and mockups and translated
-				them into functional applications. Her journey through retail and hospitality taught her the
-				value of making someone's day better, a principle she carries into work every day. Outside
-				of work, she can be found snowboarding, crocheting amigurumi, exploring new places, and
-				trying new activities with friends.
+				Hannah is a{' '}
+				<Text span fw={700}>
+					UI/UX developer
+				</Text>{' '}
+				with a passion for design. She brings a blend of creativity and technical expertise to every
+				project. With a Bachelor’s in Operations and Information Management and a Master’s in
+				Computer Information Systems, she honed her skills in web app development. She's led the
+				development of innovative mobile and web-based software solutions that enhance operational
+				readiness and management capabilities for diverse systems, meeting the needs and
+				expectations of global users. She's crafted wireframes and mockups and translated them into
+				functional applications. Her journey through retail and hospitality taught her the value of
+				making someone's day better, a principle she carries into work every day. Outside of work,
+				she can be found{' '}
+				<Text span fw={700}>
+					snowboarding, crocheting amigruumi, exploring{' '}
+				</Text>{' '}
+				new places, and trying new activities with friends.
 			</Text>
 
 			<Button w={150} onClick={() => setIsResumeVisible(true)}>
