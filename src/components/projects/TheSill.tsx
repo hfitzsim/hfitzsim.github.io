@@ -30,10 +30,17 @@ const TheSill: React.FC<ProjectProps> = ({ title }) => {
 				<h4>Mobile App Design</h4>
 				<Text style={{ lineHeight: '2' }}>
 					For this class, the assignment was to design a mobile app for a website that did not yet
-					have one. I chose <a href="https://www.thesill.com/">TheSill.com.</a> A plan subscription
-					service. For part one, we were to redesign the logo and create wireframes for five
-					different app pages that would represent different functions. I created designs for the
-					following:
+					have one. I chose <a href="https://www.thesill.com/">TheSill.com.</a> A potted plant
+					subscription service. For part one, we were to{' '}
+					<Text span fw={700}>
+						redesign{' '}
+					</Text>
+					the logo and{' '}
+					<Text span fw={700}>
+						create wireframes
+					</Text>{' '}
+					for five different app pages that would represent different functions. I created designs
+					for the following:
 					<List ml={30} my={15}>
 						<List.Item>a landing page</List.Item>
 						<List.Item>main menu of services</List.Item>
@@ -45,7 +52,15 @@ const TheSill: React.FC<ProjectProps> = ({ title }) => {
 				</Text>
 				<ExtendedImage src={img1} fullWidth />
 				<Text>
-					After peer review, the feedback was incorporated into the higher fidelity mockups below.
+					After peer review, the{' '}
+					<Text span fw={700}>
+						feedback
+					</Text>{' '}
+					was incorporated into the{' '}
+					<Text span fw={700}>
+						higher fidelity mockups
+					</Text>{' '}
+					below.
 				</Text>
 				<SimpleGrid cols={gridCols}>{extendedImages}</SimpleGrid>
 			</Stack>

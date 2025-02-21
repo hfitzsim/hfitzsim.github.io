@@ -20,8 +20,8 @@ const MountainMatrix: React.FC<ProjectProps> = ({ title }) => {
 			</Flex>
 			<Text maw={800}>
 				For this project, I designed and implemented different views for users to compare ski resort
-				statistics. This would help with decision paralysis that can occur when trying to choose a
-				resort to go to on a particular day. I designed the logo with Adobe Illustrator and
+				statistics. This would help with the decision paralysis that can occur when trying to choose
+				a resort to go to on a particular day. I designed the logo with Adobe Illustrator and
 				developed a total of four different views:
 				<Space />
 				<List ml={30} my={15}>
@@ -30,9 +30,10 @@ const MountainMatrix: React.FC<ProjectProps> = ({ title }) => {
 					<List.Item>Resort Comparison View</List.Item>
 					<List.Item>Map View</List.Item>
 				</List>
-				This project was built with Angular, Angular Material, and the Leaflet API. The data
-				localized to the north east of the US, some of the ski resorts I have visited frequently.
-				There is one entry for Whistler Blackcomb because it is my favorite.
+				This project was built with Angular, Angular Material, and the Leaflet API. The data use for
+				the app is localized to the north east of the United States, including many ski resorts I
+				have visited frequently for snowboarding. There is one entry for Whistler Blackcomb in BC,
+				Canada because it is my favorite.
 			</Text>
 		</Stack>
 	);
