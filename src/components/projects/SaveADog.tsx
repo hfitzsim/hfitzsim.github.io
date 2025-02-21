@@ -1,8 +1,15 @@
-import { Text, Image } from '@mantine/core';
+import { Text, Image, Title } from '@mantine/core';
 
-const SaveADog = () => {
+interface ProjectProps {
+	title: string;
+}
+
+const SaveADog: React.FC<ProjectProps> = ({ title }) => {
 	return (
 		<>
+			<Title order={2} style={{ textAlign: 'center' }}>
+				{title}
+			</Title>
 			<h4>Website Redesign</h4>
 			<Text>
 				This project is a redesign of the website <a href="https://saveadog.org/">SaveADog.org. </a>

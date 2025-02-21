@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 
 const Root = () => {
 	const pinned = useHeadroom({ fixedAt: 120 });
-	const isXs = useMediaQuery('(max-width: 900px)');
+	const isXs = useMediaQuery('(max-width: 600px)', true);
 	const location = useLocation();
 	return (
 		<AppShell
@@ -22,7 +22,7 @@ const Root = () => {
 
 			<AppShell.Main pt={location.pathname !== '/' ? 90 : 10}>
 				<Container fluid px={isXs ? 'xs' : 'xl'} mb="xl">
-					<Outlet context={{ isXs }} />
+					<Outlet context={isXs} />
 				</Container>
 			</AppShell.Main>
 		</AppShell>

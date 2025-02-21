@@ -3,6 +3,7 @@ export * from './ProjectButton';
 export * from './Resume';
 export * from './ProjectDetail';
 export * from './Breadcrumb';
+export * from './ExtendedImage';
 
 /** PROJECTS */
 export * from './projects/EventTracker';

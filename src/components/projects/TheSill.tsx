@@ -1,54 +1,55 @@
-import { Text, Image, SimpleGrid } from '@mantine/core';
+import { Container, Title, Stack, Text, SimpleGrid, List } from '@mantine/core';
+import { ExtendedImage } from '@/components';
 import { useOutletContext } from 'react-router-dom';
+import img1 from '@/assets/TheSillWireframes-1.png';
+import img2 from '@/assets/TheSillMobileApp-2.png';
+import img3 from '@/assets/TheSillMobileApp-3.png';
+import img4 from '@/assets/TheSillMobileApp-4.png';
+import img5 from '@/assets/TheSillMobileApp-5.png';
+import img6 from '@/assets/TheSillMobileApp-6.png';
 
-const TheSill = () => {
+interface ProjectProps {
+	title: string;
+}
+
+const TheSill: React.FC<ProjectProps> = ({ title }) => {
 	const isXs = useOutletContext();
-	const allImages = () => {
-		return (
-			<>
-				<figure>
-					<Image src="/assets/TheSillMobileApp-2.png" />
-					<figcaption>Opening Page</figcaption>
-				</figure>
-				<figure>
-					<Image src="/assets/TheSillMobileApp-3.png" />
-					<figcaption>Home Page</figcaption>
-				</figure>
-				<figure>
-					<Image src="/assets/TheSillMobileApp-4.png" />
-					<figcaption>Shopping Page</figcaption>
-				</figure>
-				<figure>
-					<Image src="/assets/TheSillMobileApp-5.png" />
-					<figcaption>Cart/Checkout Page</figcaption>
-				</figure>
-				<figure>
-					<Image src="/assets/TheSillMobileApp-6.png" />
-					<figcaption>Account Page</figcaption>
-				</figure>
-			</>
-		);
-	};
+	const gridCols = isXs === undefined ? 5 : isXs ? 1 : 5;
+
+	const images = [img2, img3, img4, img5, img6];
+
+	const extendedImages = images.map((img) => {
+		return <ExtendedImage key={img} src={img} fullHeight />;
+	});
 	return (
-		<>
-			<h4>Mobile App Design</h4>
-			<Text>
-				For this class, we were asked to design a mobile app for a website that did not already have
-				one. I chose <a href="https://www.thesill.com/">TheSill.com.</a> For part one, we were to
-				redesign the logo and create wireframes for five different app pages that would represent
-				different app functions. Below are the landing page, main menu of services, shopping page,
-				shopping cart/checkout, and account page. The wireframes were presented for peer review and
-				feedback received was implemented into the final design.
-			</Text>
-			<figure>
-				<Image src="/assets/TheSillWireframes-1.png" />
-			</figure>
-			<Text>
-				Below is the final design which simplified the landing page, added color, images, and a
-				quick add button when on the shopping page.
-			</Text>
-			{isXs ? allImages() : <SimpleGrid cols={5}>{allImages()}</SimpleGrid>}
-		</>
+		<Container>
+			<Stack align="center" gap="md" maw={800} justify={'center'}>
+				<Title order={2} style={{ textAlign: 'center' }}>
+					{title}
+				</Title>
+				<h4>Mobile App Design</h4>
+				<Text style={{ lineHeight: '2' }}>
+					For this class, the assignment was to design a mobile app for a website that did not yet
+					have one. I chose <a href="https://www.thesill.com/">TheSill.com.</a> A plan subscription
+					service. For part one, we were to redesign the logo and create wireframes for five
+					different app pages that would represent different functions. I created designs for the
+					following:
+					<List ml={30} my={15}>
+						<List.Item>a landing page</List.Item>
+						<List.Item>main menu of services</List.Item>
+						<List.Item>shopping page</List.Item>
+						<List.Item>shopping cart/checkout</List.Item>
+						<List.Item>account page</List.Item>
+					</List>
+					Feel free to click on any of the images to see the full size version.
+				</Text>
+				<ExtendedImage src={img1} fullWidth />
+				<Text>
+					After peer review, the feedback was incorporated into the higher fidelity mockups below.
+				</Text>
+				<SimpleGrid cols={gridCols}>{extendedImages}</SimpleGrid>
+			</Stack>
+		</Container>
 	);
 };
 

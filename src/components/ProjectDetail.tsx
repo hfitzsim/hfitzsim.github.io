@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import projects from '@/assets/data/projects.json';
-import { Title, Container } from '@mantine/core';
+import { Title } from '@mantine/core';
 import { useState, useEffect } from 'react';
 import { Breadcrumb, EventTracker, TheSill, SaveADog, MountainMatrix } from '@/components';
 
@@ -14,16 +14,16 @@ const ProjectDetail = () => {
 
 		switch (projectId) {
 			case '1':
-				Component = <MountainMatrix />;
+				Component = <MountainMatrix title="Mountain Matrix" />;
 				break;
 			case '2':
-				Component = <EventTracker />;
+				Component = <EventTracker title="Event Tracker" />;
 				break;
 			case '3':
-				Component = <TheSill />;
+				Component = <TheSill title="The Sill" />;
 				break;
 			case '4':
-				Component = <SaveADog />;
+				Component = <SaveADog title="Save a Dog" />;
 				break;
 			default:
 				Component = null;
@@ -35,9 +35,6 @@ const ProjectDetail = () => {
 	return (
 		<>
 			<Breadcrumb project={project!.title} />
-			<Title order={2} style={{ textAlign: 'center' }}>
-				{project!.title}
-			</Title>
 			{projectToRender}
 		</>
 	);
