@@ -14,7 +14,7 @@ const Bio = () => {
 	});
 
 	const handleGetResumeClick = () => {
-		isXs ? window.open('/files/HannahFitzsimmons.Resume.pdf', '_blank') : setIsResumeVisible(true);
+		isXs ? window.open('/files/HannahFitzsimmonsResume.pdf', '_blank') : setIsResumeVisible(true);
 		if (isResumeVisible) {
 			scrollIntoView();
 		}
@@ -61,7 +61,7 @@ const Bio = () => {
 			</Button>
 			{isResumeVisible && (
 				<Paper shadow="lg" p="md" maw="auto" ref={targetRef}>
-					<Resume filepath="/files/HannahFitzsimmons.Resume.pdf" />
+					<Resume filepath="/files/HannahFitzsimmonsResume.pdf" />
 				</Paper>
 			)}
 		</Stack>
