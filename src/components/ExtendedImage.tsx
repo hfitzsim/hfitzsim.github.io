@@ -3,6 +3,7 @@ import { useDisclosure } from '@mantine/hooks';
 
 interface ImageProps {
 	src: string;
+	alt: string;
 	fullWidth?: boolean;
 	fullHeight?: boolean;
 }
@@ -44,7 +45,7 @@ const ExtendedImage: React.FC<ImageProps> = (props) => {
 					zIndex: opened ? 200 : -1,
 				}}
 			>
-				<Image src={props.src} fit="contain" m={0} style={{ display: 'block' }} />
+				<Image src={props.src} alt={props.alt} fit="contain" m={0} style={{ display: 'block' }} />
 			</Modal>
 		</>
 	);

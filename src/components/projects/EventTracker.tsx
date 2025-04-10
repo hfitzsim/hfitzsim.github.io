@@ -12,11 +12,17 @@ interface ProjectProps {
 }
 
 const EventTracker: React.FC<ProjectProps> = ({ title }) => {
-	const images = [addEvent, acctSettings, updateAcct, admin, progress];
+	const images = [
+		{ src: addEvent, alt: 'Adding an event' },
+		{ src: acctSettings, alt: 'Account Settings' },
+		{ src: updateAcct, alt: 'Update Account' },
+		{ src: admin, alt: 'Admin view' },
+		{ src: progress, alt: 'Event attendance tracking progress view' },
+	];
 	const isXs = useOutletContext();
 
 	const extendedImages = images.map((img) => {
-		return <ExtendedImage key={img} src={img} fullHeight />;
+		return <ExtendedImage key={img.src} src={img.src} alt={img.alt} fullHeight />;
 	});
 
 	return (

@@ -16,10 +16,16 @@ const TheSill: React.FC<ProjectProps> = ({ title }) => {
 	const isXs = useOutletContext();
 	const gridCols = isXs === undefined ? 5 : isXs ? 1 : 5;
 
-	const images = [img2, img3, img4, img5, img6];
+	const images = [
+		{ src: img2, alt: 'TheSill Mobile App splash screen' },
+		{ src: img3, alt: 'TheSill Mobile App main menu' },
+		{ src: img4, alt: 'TheSill Mobile App shopping screen' },
+		{ src: img5, alt: 'TheSill Mobile App checkout screen' },
+		{ src: img6, alt: 'TheSill Mobile App account and past orders screen' },
+	];
 
 	const extendedImages = images.map((img) => {
-		return <ExtendedImage key={img} src={img} fullHeight />;
+		return <ExtendedImage key={img.src} src={img.src} alt={img.alt} fullHeight />;
 	});
 	return (
 		<Container>
@@ -53,7 +59,7 @@ const TheSill: React.FC<ProjectProps> = ({ title }) => {
 					</List>
 					Feel free to click on any of the images to see the full size version.
 				</Text>
-				<ExtendedImage src={img1} fullWidth />
+				<ExtendedImage src={img1} alt={'TheSill Mobile App Low Fidelity Wireframes'} fullWidth />
 				<Text>
 					After peer review, the{' '}
 					<Text span fw={700}>

@@ -6,7 +6,12 @@ import img2 from '@/assets/aerial_yoga.jpeg';
 import img3 from '@/assets/tulum.jpeg';
 import img4 from '@/assets/hannah-amigurumi.png';
 
-const images = [img1, img2, img3, img4];
+const images = [
+	{ src: img1, alt: 'Hannah Snowboarding at Whistler' },
+	{ src: img2, alt: 'Hannah doing Aerial Yoga in Tulum' },
+	{ src: img3, alt: 'Hannah in Tulum' },
+	{ src: img4, alt: 'Hannah with one of her corcheted amigurumi' },
+];
 
 const ImageRotator = () => {
 	const [index, setIndex] = useState(0);
@@ -29,12 +34,12 @@ const ImageRotator = () => {
 
 	return (
 		<div style={{ position: 'relative', width: '250px', height: '250px', overflow: 'hidden' }}>
-			{images.map((src, i) => {
+			{images.map((img, i) => {
 				const posIndex = (i - index + images.length) % images.length;
 
 				return (
 					<motion.div
-						key={src}
+						key={img.src}
 						initial={positions[posIndex]}
 						animate={positions[posIndex]}
 						transition={{ duration: 0.8, ease: 'easeInOut' }}
@@ -47,8 +52,8 @@ const ImageRotator = () => {
 						}}
 					>
 						<Image
-							src={src}
-							alt="Rotating image"
+							src={img.src}
+							alt={img.alt}
 							radius="xl" // Ensures Mantine's Image is circular
 							style={{ width: '100%', height: '100%', objectFit: 'cover' }} // Covers fully
 						/>
