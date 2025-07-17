@@ -1,28 +1,35 @@
 [
 	{
 		"id": 1,
-		"type": "web",
-		"title": "Mountain Matrix",
-		"image": "/assets/mtn-matrix-mtn-search.png",
-		"description": "Final Project for MET CS 701 Rich Internet App Development"
+		"type": "Software Development",
+		"title": "YGT",
+		"image": "/assets/ygt_exampleGoal.png",
+		"description": "Personal Goal Tracker"
 	},
 	{
 		"id": 2,
-		"type": "web",
-		"title": "Event Tracker",
-		"image": "/assets/event-tracker-acct-settings.png",
-		"description": "Final Project for MET CS 601 Web App Development"
+		"type": "Software Development",
+		"title": "Mountain Matrix",
+		"image": "/assets/mtn-matrix-mtn-search.png",
+		"description": "Project for MET CS 701 Rich Internet App Development"
 	},
 	{
 		"id": 3,
-		"type": "design",
+		"type": "Software Development",
+		"title": "Event Tracker",
+		"image": "/assets/event-tracker-acct-settings.png",
+		"description": "Project for MET CS 601 Web App Development"
+	},
+	{
+		"id": 4,
+		"type": "UX Design",
 		"title": "The Sill",
 		"image": "/assets/TheSillMobileApp-2.png",
 		"description": "Mobile App Design for COM CM741 Design & New Media"
 	},
 	{
-		"id": 4,
-		"type": "design",
+		"id": 5,
+		"type": "UX Design",
 		"title": "Save a Dog",
 		"image": "/assets/SaveADog-1.png",
 		"description": "Website Design for COM CM741 Design & New Media"

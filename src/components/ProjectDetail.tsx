@@ -1,7 +1,14 @@
 import { useParams } from 'react-router-dom';
 import projects from '@/assets/data/projects.json';
 import { useState, useEffect } from 'react';
-import { Breadcrumb, EventTracker, TheSill, SaveADog, MountainMatrix } from '@/components';
+import {
+	Breadcrumb,
+	EventTracker,
+	TheSill,
+	SaveADog,
+	MountainMatrix,
+	YouGotThis,
+} from '@/components';
 
 const ProjectDetail = () => {
 	const { projectId } = useParams();
@@ -13,15 +20,18 @@ const ProjectDetail = () => {
 
 		switch (projectId) {
 			case '1':
-				Component = <MountainMatrix title="Mountain Matrix" />;
+				Component = <YouGotThis title="YGT" />;
 				break;
 			case '2':
-				Component = <EventTracker title="Event Tracker" />;
+				Component = <MountainMatrix title="Mountain Matrix" />;
 				break;
 			case '3':
-				Component = <TheSill title="The Sill" />;
+				Component = <EventTracker title="Event Tracker" />;
 				break;
 			case '4':
+				Component = <TheSill title="The Sill" />;
+				break;
+			case '5':
 				Component = <SaveADog title="Save a Dog" />;
 				break;
 			default:
