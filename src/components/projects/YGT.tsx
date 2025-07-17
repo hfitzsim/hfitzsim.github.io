@@ -29,7 +29,7 @@ const YouGotThis = ({ title }: ProjectProps) => {
 				{title}
 			</Title>{' '}
 			<Flex justify="center" m={20}>
-				<Anchor href="https://hfitzsim.dev/mountain-matrix" target="_blank">
+				<Anchor href="https://hfitzsim.dev/ygt/" target="_blank">
 					<Button>See Live Demo</Button>
 				</Anchor>
 			</Flex>
