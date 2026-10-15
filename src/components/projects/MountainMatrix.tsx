@@ -1,15 +1,11 @@
 import { Stack, Flex, Text, Button, Anchor, List, Image, Space, Title } from '@mantine/core';
 import screenshot from '@/assets/mm-dashboard.png';
 
-interface ProjectProps {
-	title: string;
-}
-
-const MountainMatrix: React.FC<ProjectProps> = ({ title }) => {
+const MountainMatrix = () => {
 	return (
 		<Stack gap="sm" align="center">
 			<Title order={2} style={{ textAlign: 'center' }}>
-				{title}
+				Mountain Matrix
 			</Title>
 			<Image src={screenshot} h={'auto'} maw={900} mt={20} />
 

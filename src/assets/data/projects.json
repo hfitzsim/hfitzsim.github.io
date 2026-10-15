@@ -4,7 +4,7 @@
 		"type": "Software Development",
 		"title": "YGT",
 		"image": "/assets/ygt_exampleGoal.png",
-		"description": "Personal Goal Tracker"
+		"description": "Full Stack Personal Goal Tracker"
 	},
 	{
 		"id": 2,
@@ -19,6 +19,20 @@
 		"title": "Event Tracker",
 		"image": "/assets/event-tracker-acct-settings.png",
 		"description": "Project for MET CS 601 Web App Development"
+	},
+	{
+		"id": 6,
+		"type": "Software Development",
+		"title": "Bachelorette Itinerary",
+		"image": "",
+		"description": "Client-only hub for a bachelorette trip I planned for my friend."
+	},
+	{
+		"id": 7,
+		"type": "Software Development",
+		"title": "Bridal Shower Jeopardy",
+		"image": "",
+		"description": "Full Stack Jeopardy game I made for a bridal shower, for the same friend as the itinerary."
 	},
 	{
 		"id": 4,

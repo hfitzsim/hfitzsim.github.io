@@ -7,11 +7,7 @@ import updateAcct from '@/assets/event-tracker-update-acct.png';
 import admin from '@/assets/event-tracker-admin.png';
 import progress from '@/assets/event-tracker-progress.png';
 
-interface ProjectProps {
-	title: string;
-}
-
-const EventTracker: React.FC<ProjectProps> = ({ title }) => {
+const EventTracker = () => {
 	const images = [
 		{ src: addEvent, alt: 'Adding an event' },
 		{ src: acctSettings, alt: 'Account Settings' },
@@ -29,7 +25,7 @@ const EventTracker: React.FC<ProjectProps> = ({ title }) => {
 		<Container>
 			<Stack gap="xl" align="center" maw={800} justify="center">
 				<Title order={2} style={{ textAlign: 'center' }}>
-					{title}
+					Event Tracker
 				</Title>
 				<Text style={{ lineHeight: '2' }}>
 					For this class, I created an application using vanilla{' '}

@@ -1,53 +1,33 @@
-import { Group, Title, Text, Stack } from '@mantine/core';
-import { NavLink, useNavigate } from 'react-router-dom';
-
-const links = [
-	{ label: 'Projects', value: '/projects' },
-	{ label: 'Contact', value: '/contact' },
-];
+import { Group, Text } from '@mantine/core';
 
 interface HeaderProps {
-	isXs: boolean | undefined;
+	nav: (view: string) => void;
 }
-const Header: React.FC<HeaderProps> = ({ isXs }) => {
-	const navigate = useNavigate();
 
-	const navLinks = links.map((link) => {
+const anchors = [
+	{ label: 'ABOUT', href: '#about' },
+	{ label: 'ARCHIVES', href: '#projects' },
+	{ label: 'PHILOSOPHY', href: '#philosophy' },
+	{ label: 'CONTACT', href: '#contact' },
+];
+
+const Header = ({ nav }: HeaderProps) => {
+	const navLinks = anchors.map((link) => {
 		return (
-			<NavLink
-				key={'link' + link.value}
-				to={link.value}
-				className={({ isActive }) => (isActive ? 'activeLink' : 'link')}
-			>
+			<a href={link.href} className="link">
 				{link.label}
-			</NavLink>
+			</a>
 		);
 	});
 
 	return (
-		<Group justify="space-between" align="center" bg="isabelline">
-			{isXs ? (
-				<Stack gap={0} style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
-					<Text c={'vermillion'} style={{ fontWeight: '900', letterSpacing: '0.45em' }}>
-						<span style={{ fontWeight: '900', letterSpacing: '0.45em' }}>HANNAH </span>
-					</Text>
-					<Text c="vermillion">FITZSIMMONS</Text>
-				</Stack>
-			) : (
-				<Title
-					order={1}
-					style={{ letterSpacing: '0.5em', cursor: 'pointer' }}
-					c={'vermillion'}
-					onClick={() => navigate('/')}
-				>
-					<Text span inherit fw={900}>
-						HANNAH{' '}
-					</Text>
-					<Text span inherit fw={300}>
-						FITZSIMMONS
-					</Text>
-				</Title>
-			)}
+		<Group justify="space-between" align="center" style={{ margin: '10px 50px' }}>
+			<Text
+				style={{ letterSpacing: '0.5em', cursor: 'pointer', fontWeight: '200' }}
+				onClick={() => nav('home')}
+			>
+				HF // PORTFOLIO
+			</Text>
 
 			<Group gap={40}>{navLinks}</Group>
 		</Group>

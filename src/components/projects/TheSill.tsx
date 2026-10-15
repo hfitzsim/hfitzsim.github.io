@@ -8,11 +8,7 @@ import img4 from '@/assets/TheSillMobileApp-4.png';
 import img5 from '@/assets/TheSillMobileApp-5.png';
 import img6 from '@/assets/TheSillMobileApp-6.png';
 
-interface ProjectProps {
-	title: string;
-}
-
-const TheSill: React.FC<ProjectProps> = ({ title }) => {
+const TheSill = () => {
 	const isXs = useOutletContext();
 	const gridCols = isXs === undefined ? 5 : isXs ? 1 : 5;
 
@@ -31,16 +27,13 @@ const TheSill: React.FC<ProjectProps> = ({ title }) => {
 		<Container>
 			<Stack align="center" gap="md" maw={800} justify={'center'}>
 				<Title order={2} style={{ textAlign: 'center' }}>
-					{title}
+					The Sill
 				</Title>
 				<h4>Mobile App Design</h4>
 				<Text style={{ lineHeight: '2' }}>
 					For this class, the assignment was to design a mobile app for a website that did not yet
-					have one. I chose{' '}
-					<Anchor c={'vermillion'} href="https://www.thesill.com/">
-						TheSill.com.
-					</Anchor>{' '}
-					A potted plant subscription service. For part one, we were to{' '}
+					have one. I chose <Anchor href="https://www.thesill.com/">TheSill.com.</Anchor> A potted
+					plant subscription service. For part one, we were to{' '}
 					<Text span fw={700}>
 						redesign{' '}
 					</Text>

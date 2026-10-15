@@ -13,11 +13,7 @@ import specifyResetGoal from '@/assets/ygt_specifyResetGoal.png';
 import userConfirmationModal from '@/assets/ygt_userConfirmationModal.png';
 import { useMediaQuery } from '@mantine/hooks';
 
-interface ProjectProps {
-	title: string;
-}
-
-const YouGotThis = ({ title }: ProjectProps) => {
+const YouGotThis = () => {
 	const isSmall = useMediaQuery('(max-width: 36em)');
 	const isMedium = useMediaQuery('(max-width: 48em)');
 
@@ -26,7 +22,7 @@ const YouGotThis = ({ title }: ProjectProps) => {
 	return (
 		<Stack gap="sm" align="center">
 			<Title order={2} style={{ textAlign: 'center' }}>
-				{title}
+				You Got This
 			</Title>{' '}
 			<Flex justify="center" m={20}>
 				<Anchor href="https://hfitzsim.dev/ygt/" target="_blank">
